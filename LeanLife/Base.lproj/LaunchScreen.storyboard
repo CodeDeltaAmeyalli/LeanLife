@@ -16,16 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LogeLeanLifeWhite" translatesAutoresizingMaskIntoConstraints="NO" id="xbj-In-fpe">
-                                <rect key="frame" x="242" y="68" width="288" height="101"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogeLeanLifeWhite" translatesAutoresizingMaskIntoConstraints="NO" id="xbj-In-fpe">
+                                <rect key="frame" x="156" y="109" width="288" height="101"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="FoodWelcome" translatesAutoresizingMaskIntoConstraints="NO" id="OOx-hQ-NeP">
-                                <rect key="frame" x="199" y="202" width="374" height="97"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FoodWelcome" translatesAutoresizingMaskIntoConstraints="NO" id="OOx-hQ-NeP">
+                                <rect key="frame" x="113" y="243" width="374" height="97"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2901960784" green="0.75294117650000003" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="OOx-hQ-NeP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="K6P-cc-dCm"/>
                             <constraint firstItem="OOx-hQ-NeP" firstAttribute="top" secondItem="xbj-In-fpe" secondAttribute="bottom" constant="36" id="VL8-5a-tfH"/>
+                            <constraint firstItem="xbj-In-fpe" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="e5L-S9-BlL"/>
+                            <constraint firstItem="xbj-In-fpe" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="89" id="vna-jo-pE3"/>
                         </constraints>
                     </view>
                 </viewController>
