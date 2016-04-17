@@ -14,6 +14,7 @@
 		046E8EC41CC30A100080070D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046E8EC31CC30A100080070D /* Assets.xcassets */; };
 		046E8EC71CC30A100080070D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E8EC51CC30A100080070D /* LaunchScreen.storyboard */; };
 		046E8ED21CC30A100080070D /* LeanLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E8ED11CC30A100080070D /* LeanLifeTests.swift */; };
+		046E8EDD1CC332780080070D /* StoryboardMainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E8EDC1CC332780080070D /* StoryboardMainMenu.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		046E8ECD1CC30A100080070D /* LeanLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		046E8ED11CC30A100080070D /* LeanLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanLifeTests.swift; sourceTree = "<group>"; };
 		046E8ED31CC30A100080070D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046E8EDC1CC332780080070D /* StoryboardMainMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardMainMenu.storyboard; path = ../StoryboardMainMenu.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		046E8EB91CC30A0F0080070D /* LeanLife */ = {
 			isa = PBXGroup;
 			children = (
+				046E8EDC1CC332780080070D /* StoryboardMainMenu.storyboard */,
 				046E8EBA1CC30A0F0080070D /* AppDelegate.swift */,
 				046E8EBC1CC30A0F0080070D /* FirstViewController.swift */,
 				046E8EBE1CC30A0F0080070D /* SecondViewController.swift */,
@@ -149,7 +152,7 @@
 				TargetAttributes = {
 					046E8EB61CC30A0F0080070D = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 9UTQZ55TKK;
+						DevelopmentTeam = 89CTK9P9G9;
 					};
 					046E8ECC1CC30A100080070D = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -184,6 +187,7 @@
 				046E8EC71CC30A100080070D /* LaunchScreen.storyboard in Resources */,
 				046E8EC41CC30A100080070D /* Assets.xcassets in Resources */,
 				046E8EC21CC30A100080070D /* Main.storyboard in Resources */,
+				046E8EDD1CC332780080070D /* StoryboardMainMenu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +339,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LeanLife/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,7 +353,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LeanLife/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
