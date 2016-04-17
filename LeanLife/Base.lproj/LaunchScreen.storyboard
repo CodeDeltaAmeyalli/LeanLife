@@ -25,10 +25,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="rex-vs-2eK" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="155" id="JZz-cL-wAa"/>
+                            <constraint firstItem="d5n-uV-tTz" firstAttribute="top" secondItem="rex-vs-2eK" secondAttribute="bottom" constant="33" id="MZg-AW-Cbg"/>
                             <constraint firstItem="d5n-uV-tTz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OJN-dn-S8S"/>
-                            <constraint firstItem="rex-vs-2eK" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="155" id="RQe-6i-sp7"/>
-                            <constraint firstItem="rex-vs-2eK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xz8-kl-You"/>
-                            <constraint firstItem="d5n-uV-tTz" firstAttribute="top" secondItem="rex-vs-2eK" secondAttribute="bottom" constant="36" id="fuD-gL-8Yc"/>
+                            <constraint firstItem="rex-vs-2eK" firstAttribute="centerX" secondItem="d5n-uV-tTz" secondAttribute="centerX" id="Yyf-dD-kOg"/>
                         </constraints>
                     </view>
                 </viewController>
