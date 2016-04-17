@@ -39,7 +39,7 @@
 		046E8ECD1CC30A100080070D /* LeanLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		046E8ED11CC30A100080070D /* LeanLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanLifeTests.swift; sourceTree = "<group>"; };
 		046E8ED31CC30A100080070D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		046E8EDC1CC332780080070D /* StoryboardMainMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardMainMenu.storyboard; sourceTree = "<group>"; };
+		046E8EDC1CC332780080070D /* StoryboardMainMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardMainMenu.storyboard; path = ../StoryboardMainMenu.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,6 @@
 		046E8EAE1CC30A0F0080070D = {
 			isa = PBXGroup;
 			children = (
-				046E8EDC1CC332780080070D /* StoryboardMainMenu.storyboard */,
 				046E8EB91CC30A0F0080070D /* LeanLife */,
 				046E8ED01CC30A100080070D /* LeanLifeTests */,
 				046E8EB81CC30A0F0080070D /* Products */,
@@ -82,6 +81,7 @@
 		046E8EB91CC30A0F0080070D /* LeanLife */ = {
 			isa = PBXGroup;
 			children = (
+				046E8EDC1CC332780080070D /* StoryboardMainMenu.storyboard */,
 				046E8EBA1CC30A0F0080070D /* AppDelegate.swift */,
 				046E8EBC1CC30A0F0080070D /* FirstViewController.swift */,
 				046E8EBE1CC30A0F0080070D /* SecondViewController.swift */,
