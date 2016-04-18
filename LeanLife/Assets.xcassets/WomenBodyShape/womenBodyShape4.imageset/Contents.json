@@ -2,10 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "WomenLean4Color-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "WomenLean4Color.png",
       "scale" : "2x"
     },
     {

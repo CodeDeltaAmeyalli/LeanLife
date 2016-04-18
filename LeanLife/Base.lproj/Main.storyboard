@@ -21,13 +21,13 @@
                                 <rect key="frame" x="221" y="279" width="158" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
                                 <rect key="frame" x="203" y="329" width="195" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -57,46 +57,120 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2hP-iB-Hi7">
-                                <rect key="frame" x="20" y="68" width="560" height="483"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2hP-iB-Hi7">
+                                <rect key="frame" x="15" y="28" width="560" height="795"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0et-0l-Tnq">
-                                        <rect key="frame" x="215" y="0.0" width="131" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.29304769746101444" green="0.3096981348167539" blue="0.3096981348167539" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="191" placeholderIntrinsicHeight="44" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w1X-ap-I2z">
-                                        <rect key="frame" x="185" y="41" width="191" height="45"/>
-                                        <segments>
-                                            <segment title="Lose "/>
-                                            <segment title="Mantain"/>
-                                            <segment title="Gain"/>
-                                        </segments>
-                                        <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                    </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="376" placeholderIntrinsicHeight="21" text="Select your body shape " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXX-4M-eUI">
-                                        <rect key="frame" x="92" y="97" width="376" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scaleWomen" translatesAutoresizingMaskIntoConstraints="NO" id="pcf-N5-fyp">
-                                        <rect key="frame" x="148" y="130" width="264" height="84"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Tyv-Td-YuF">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight Goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0et-0l-Tnq">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" red="0.29304769746101444" green="0.3096981348167539" blue="0.3096981348167539" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="191" placeholderIntrinsicHeight="44" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w1X-ap-I2z">
+                                                <rect key="frame" x="0.0" y="41" width="560" height="45"/>
+                                                <segments>
+                                                    <segment title="Lose "/>
+                                                    <segment title="Mantain"/>
+                                                    <segment title="Gain"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MrT-fQ-pzT">
+                                        <rect key="frame" x="107" y="97" width="346" height="429"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="376" placeholderIntrinsicHeight="21" text="Select your body shape " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXX-4M-eUI">
+                                                <rect key="frame" x="0.0" y="0.0" width="346" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="S4P-CU-PA9">
+                                                <rect key="frame" x="0.0" y="33" width="346" height="192"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape1" translatesAutoresizingMaskIntoConstraints="NO" id="jP8-Qv-ocP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="192"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="igv-K5-eLD"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape2" translatesAutoresizingMaskIntoConstraints="NO" id="SI8-y5-gQe">
+                                                        <rect key="frame" x="68" y="0.0" width="56" height="192"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="aeM-dD-dv7"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape3" translatesAutoresizingMaskIntoConstraints="NO" id="49A-cB-0SD">
+                                                        <rect key="frame" x="136" y="0.0" width="62" height="192"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="62" id="067-uG-lX8"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape4" translatesAutoresizingMaskIntoConstraints="NO" id="hjv-qa-2Sl">
+                                                        <rect key="frame" x="210" y="0.0" width="60" height="192"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="P0P-Yk-VHT"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Ve3-eF-CpY"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape5" translatesAutoresizingMaskIntoConstraints="NO" id="3uY-oi-iGd">
+                                                        <rect key="frame" x="282" y="0.0" width="64" height="192"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="PCP-gG-Ryi"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4Iv-ow-qAn">
+                                                <rect key="frame" x="0.0" y="237" width="346" height="192"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape6" translatesAutoresizingMaskIntoConstraints="NO" id="4UF-tb-izz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="192"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="66" id="PCQ-PK-XKD"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape7" translatesAutoresizingMaskIntoConstraints="NO" id="u0q-Mg-r34">
+                                                        <rect key="frame" x="78" y="0.0" width="72" height="192"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="72" id="VHG-g6-Xkn"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape8" translatesAutoresizingMaskIntoConstraints="NO" id="Wvk-ia-PE4">
+                                                        <rect key="frame" x="162" y="0.0" width="76" height="192"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="76" id="hLR-8I-QjU"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape9" translatesAutoresizingMaskIntoConstraints="NO" id="ZXu-i5-K2y">
+                                                        <rect key="frame" x="250" y="0.0" width="96" height="192"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="78" id="0L9-RV-cCD"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physical Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5L-4C-LXf">
-                                        <rect key="frame" x="193" y="226" width="175" height="29"/>
+                                        <rect key="frame" x="193" y="538" width="175" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csY-qR-GeS">
-                                        <rect key="frame" x="0.0" y="267" width="560" height="216"/>
+                                        <rect key="frame" x="0.0" y="579" width="560" height="216"/>
                                     </pickerView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="csY-qR-GeS" firstAttribute="top" secondItem="W5L-4C-LXf" secondAttribute="bottom" constant="12" id="7cl-q2-vKU"/>
+                                    <constraint firstItem="Tyv-Td-YuF" firstAttribute="leading" secondItem="2hP-iB-Hi7" secondAttribute="leading" id="A2f-JY-YWx"/>
                                     <constraint firstItem="csY-qR-GeS" firstAttribute="leading" secondItem="2hP-iB-Hi7" secondAttribute="leading" id="GDv-Qq-ugk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tyv-Td-YuF" secondAttribute="trailing" id="MoC-WD-fwy"/>
                                     <constraint firstAttribute="bottom" secondItem="csY-qR-GeS" secondAttribute="bottom" id="oHG-ZX-8sY"/>
                                     <constraint firstAttribute="trailing" secondItem="csY-qR-GeS" secondAttribute="trailing" id="uUt-xC-Ffl"/>
                                 </constraints>
@@ -140,7 +214,15 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="scaleWomen" width="264" height="84"/>
         <image name="second" width="30" height="30"/>
+        <image name="womenBodyShape1" width="56" height="188"/>
+        <image name="womenBodyShape2" width="56" height="192"/>
+        <image name="womenBodyShape3" width="62" height="192"/>
+        <image name="womenBodyShape4" width="60" height="190"/>
+        <image name="womenBodyShape5" width="64" height="192"/>
+        <image name="womenBodyShape6" width="66" height="192"/>
+        <image name="womenBodyShape7" width="72" height="186"/>
+        <image name="womenBodyShape8" width="76" height="188"/>
+        <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
 </document>
