@@ -191,6 +191,7 @@
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xzU-1L-Xe9">
                                                         <rect key="frame" x="0.0" y="84" width="274" height="6"/>
+                                                        <color key="tintColor" red="0.96078431372549022" green="0.73725490196078436" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -205,6 +206,7 @@
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mnu-hu-M4i">
                                                         <rect key="frame" x="0.0" y="33" width="274" height="6"/>
+                                                        <color key="tintColor" red="0.81568627450980391" green="0.0039215686274509803" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                                     </progressView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-Pp-UWx">
                                                         <rect key="frame" x="0.0" y="51" width="274" height="21"/>
@@ -214,6 +216,7 @@
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cda-wn-r4z">
                                                         <rect key="frame" x="0.0" y="84" width="274" height="6"/>
+                                                        <color key="tintColor" red="0.26666666666666666" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -268,8 +271,17 @@
                                 <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Bw-qf-J67">
-                                <rect key="frame" x="20" y="425" width="150" height="2"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qMk-o8-4sa">
+                                <rect key="frame" x="229" y="470" width="150" height="6"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="865 remaining " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOb-ss-T0D">
+                                <rect key="frame" x="379" y="456" width="116" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ywe-Fi-mxG">
+                                <rect key="frame" x="50" y="426" width="150" height="6"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
