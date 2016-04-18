@@ -266,65 +266,86 @@
                                 <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="P4J-OF-QSh">
+                                <rect key="frame" x="20" y="424" width="560" height="63"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ccs-fr-lhd">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU8-ag-R45">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="286-ui-kLg">
+                                                <rect key="frame" x="0.0" y="27" width="280" height="36"/>
+                                                <string key="text">Consumed
+Calories</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-7O-gfe">
+                                        <rect key="frame" x="280" y="0.0" width="280" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="768" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAg-jJ-uZA">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P31-Yq-NP1">
+                                                <rect key="frame" x="0.0" y="27" width="280" height="36"/>
+                                                <string key="text">Remaining 
+Calories</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="10" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="93A-0C-A1F">
-                                <rect key="frame" x="20" y="400" width="560" height="2"/>
+                                <rect key="frame" x="20" y="400" width="560" height="10"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYZ-TR-4Lo">
-                                <rect key="frame" x="64" y="422" width="39" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OZ-am-cIQ">
-                                <rect key="frame" x="20" y="451" width="138" height="36"/>
-                                <string key="text">Consumed 
-Calories </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="768" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRK-Mm-RgQ">
-                                <rect key="frame" x="461" y="422" width="30" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3G5-7z-sgx">
-                                <rect key="frame" x="416" y="451" width="136" height="36"/>
-                                <string key="text">Remaining 
-Calories </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.95294117647058818" green="0.27058823529411763" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="3G5-7z-sgx" firstAttribute="top" secondItem="QRK-Mm-RgQ" secondAttribute="bottom" constant="8" id="21q-Gm-qDa"/>
-                            <constraint firstItem="QRK-Mm-RgQ" firstAttribute="top" secondItem="93A-0C-A1F" secondAttribute="bottom" constant="20" id="4Bh-fI-Tbz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rCX-Gw-d87" secondAttribute="trailing" id="4Wz-RB-yzt"/>
-                            <constraint firstItem="BYZ-TR-4Lo" firstAttribute="top" secondItem="93A-0C-A1F" secondAttribute="bottom" constant="20" id="4qq-Ee-wix"/>
+                            <constraint firstItem="93A-0C-A1F" firstAttribute="top" secondItem="Cb7-c0-hma" secondAttribute="bottom" constant="8" symbolic="YES" id="6kq-JM-i1M"/>
+                            <constraint firstItem="P4J-OF-QSh" firstAttribute="top" secondItem="93A-0C-A1F" secondAttribute="bottom" id="AcO-EY-npa"/>
                             <constraint firstItem="rCX-Gw-d87" firstAttribute="top" secondItem="CEX-py-ptL" secondAttribute="bottom" constant="30" id="DGD-bv-LEV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3G5-7z-sgx" secondAttribute="trailing" constant="28" id="DZL-JT-J3e"/>
                             <constraint firstItem="93A-0C-A1F" firstAttribute="trailing" secondItem="Uzs-Ra-Llr" secondAttribute="trailingMargin" id="InZ-xZ-rz7"/>
-                            <constraint firstItem="8OZ-am-cIQ" firstAttribute="top" secondItem="BYZ-TR-4Lo" secondAttribute="bottom" constant="8" id="KUh-SV-N2U"/>
                             <constraint firstItem="abz-l0-eEy" firstAttribute="top" secondItem="rCX-Gw-d87" secondAttribute="bottom" constant="37" id="PTM-jx-RVU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QRK-Mm-RgQ" secondAttribute="trailing" constant="89" id="SUM-ed-SeM"/>
                             <constraint firstItem="CEX-py-ptL" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="aAT-xA-qz7"/>
-                            <constraint firstItem="BYZ-TR-4Lo" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" constant="44" id="aJv-Bh-GlL"/>
                             <constraint firstItem="Cb7-c0-hma" firstAttribute="top" secondItem="abz-l0-eEy" secondAttribute="bottom" constant="8" id="azR-Pj-qdO"/>
-                            <constraint firstItem="8OZ-am-cIQ" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" constant="2" id="b6S-xq-mJz"/>
                             <constraint firstItem="93A-0C-A1F" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="beD-Q1-Nws"/>
                             <constraint firstItem="CEX-py-ptL" firstAttribute="top" secondItem="aif-bD-0zd" secondAttribute="bottom" constant="8" id="dcU-Yh-cyY"/>
                             <constraint firstItem="abz-l0-eEy" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="ey2-8M-kyK"/>
-                            <constraint firstItem="93A-0C-A1F" firstAttribute="top" secondItem="Cb7-c0-hma" secondAttribute="bottom" constant="28" id="hbA-py-7eA"/>
+                            <constraint firstItem="93A-0C-A1F" firstAttribute="top" secondItem="Cb7-c0-hma" secondAttribute="bottom" constant="10" id="hbA-py-7eA"/>
+                            <constraint firstItem="Cb7-c0-hma" firstAttribute="top" secondItem="abz-l0-eEy" secondAttribute="bottom" constant="8" id="jaB-EH-Pxt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CEX-py-ptL" secondAttribute="trailing" id="lFl-o1-hPr"/>
+                            <constraint firstItem="P4J-OF-QSh" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="lHG-4u-rOj"/>
+                            <constraint firstItem="P4J-OF-QSh" firstAttribute="top" secondItem="93A-0C-A1F" secondAttribute="bottom" constant="22" id="p0S-dI-8Iz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P4J-OF-QSh" secondAttribute="trailing" id="pAe-iF-ihg"/>
                             <constraint firstItem="abz-l0-eEy" firstAttribute="top" secondItem="rCX-Gw-d87" secondAttribute="bottom" constant="37" id="pyI-LJ-wVV"/>
                             <constraint firstItem="rCX-Gw-d87" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="r2O-IO-TYg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="93A-0C-A1F" secondAttribute="trailing" constant="410" id="tqh-NE-reW"/>
                             <constraint firstItem="Cb7-c0-hma" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="xX5-H2-EmJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pyI-LJ-wVV"/>
+                                <exclude reference="azR-Pj-qdO"/>
+                                <exclude reference="6kq-JM-i1M"/>
+                                <exclude reference="p0S-dI-8Iz"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFa-dy-3FT" userLabel="First Responder" sceneMemberID="firstResponder"/>
