@@ -337,7 +337,11 @@
 				INFOPLIST_FILE = LeanLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife3;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife2;
+>>>>>>> Adri2
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -352,7 +356,11 @@
 				INFOPLIST_FILE = LeanLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife3;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife2;
+>>>>>>> Adri2
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
