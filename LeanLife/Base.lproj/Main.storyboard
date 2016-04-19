@@ -126,7 +126,7 @@
                             <constraint firstItem="dFd-vg-P2u" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="19" id="nKB-EO-LjK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="imageProfilePhotoTabIcon" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,7 +201,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Tyv-Td-YuF" secondAttribute="trailing" constant="20" id="IIw-Hg-aBX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Goal" id="7Km-Wa-Z74"/>
+                    <tabBarItem key="tabBarItem" title="Goal" image="goalStablishmentTabIcon" id="7Km-Wa-Z74"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldO-Hs-boy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -309,7 +309,7 @@
                             <constraint firstItem="PXX-4M-eUI" firstAttribute="centerX" secondItem="q6a-W5-ca9" secondAttribute="centerX" id="di2-su-Fu6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shape" id="yuf-7j-Rzw"/>
+                    <tabBarItem key="tabBarItem" title="Shape" image="bodyShapeTabIcon" id="yuf-7j-Rzw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8M-Fl-tMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -444,7 +444,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Measurements" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Measurements" image="ruleTabIconMeasurements" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="pickerActivity" destination="csY-qR-GeS" id="ei6-EB-jvU"/>
                     </connections>
@@ -476,9 +476,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bodyShapeTabIcon" width="32" height="32"/>
         <image name="defaultProfileInfoPhoto" width="100" height="102"/>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="goalStablishmentTabIcon" width="32" height="32"/>
+        <image name="imageProfilePhotoTabIcon" width="25" height="25"/>
+        <image name="ruleTabIconMeasurements" width="32" height="32"/>
         <image name="womenBodyShape1" width="56" height="188"/>
         <image name="womenBodyShape2" width="56" height="192"/>
         <image name="womenBodyShape3" width="62" height="192"/>
