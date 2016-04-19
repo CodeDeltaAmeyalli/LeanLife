@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Profile View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="LeanLife" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile View Controller" id="9pv-A4-QxB" customClass="FirstViewController" customModule="LeanLife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -383,17 +383,134 @@ Calories</string>
                     </tabBar>
                     <connections>
                         <segue destination="MsX-b3-XGH" kind="relationship" relationship="viewControllers" id="4DF-fb-fxr"/>
-                        <segue destination="5Dj-Xe-F47" kind="relationship" relationship="viewControllers" id="KiV-rk-EEk"/>
+                        <segue destination="i87-Tv-yzK" kind="relationship" relationship="viewControllers" id="HkF-Qj-orv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9I-vB-bOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="1029"/>
         </scene>
-        <!--History -->
+        <!--History Table View Controller-->
+        <scene sceneID="FsE-gk-jLK">
+            <objects>
+                <tableViewController title="History Table View Controller" id="i87-Tv-yzK" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="191" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jha-Ga-gD2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="800" selectionStyle="default" indentationWidth="10" rowHeight="191" id="6of-Br-YRQ">
+                                <rect key="frame" x="0.0" y="28" width="600" height="191"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="800" tableViewCell="6of-Br-YRQ" id="Rf4-qP-nv9">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="190"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18/04/16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edK-Rv-KBh">
+                                            <rect key="frame" x="8" y="8" width="68" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="FPn-Ia-pxz">
+                                            <rect key="frame" x="8" y="37" width="584" height="90"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fgz-5W-Yr7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="286" height="90"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proteins " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suL-P1-vX8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.29411764709999999" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LID-Fg-Qwb">
+                                                            <rect key="frame" x="0.0" y="33" width="286" height="6"/>
+                                                            <color key="tintColor" red="0.2901960784" green="0.75294117650000003" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </progressView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYw-mK-hQG">
+                                                            <rect key="frame" x="0.0" y="51" width="286" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.29411764709999999" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3RM-Wi-TBm">
+                                                            <rect key="frame" x="0.0" y="84" width="286" height="6"/>
+                                                            <color key="tintColor" red="0.96078431369999995" green="0.73725490199999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </progressView>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qhF-Tg-bgp">
+                                                    <rect key="frame" x="298" y="0.0" width="286" height="90"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbohydrates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNA-Ic-NNW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.29411764709999999" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DbV-6Y-AEy">
+                                                            <rect key="frame" x="0.0" y="33" width="286" height="6"/>
+                                                            <color key="tintColor" red="0.81568627449999997" green="0.0039215686269999999" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </progressView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwh-oa-eZw">
+                                                            <rect key="frame" x="0.0" y="51" width="286" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.29411764709999999" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YxR-Ba-bJ1">
+                                                            <rect key="frame" x="0.0" y="84" width="286" height="6"/>
+                                                            <color key="tintColor" red="0.2666666667" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </progressView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nab-G4-bvP">
+                                            <rect key="frame" x="8" y="135" width="584" height="31"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMl-tu-hH2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="10" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="alK-u2-yP7">
+                                                    <rect key="frame" x="0.0" y="21" width="584" height="10"/>
+                                                    <color key="tintColor" red="0.95294117649999999" green="0.27058823529999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </progressView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FPn-Ia-pxz" secondAttribute="trailing" id="C3w-fb-BQ1"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="nab-G4-bvP" secondAttribute="trailing" id="D6A-MT-VHP"/>
+                                        <constraint firstItem="FPn-Ia-pxz" firstAttribute="top" secondItem="edK-Rv-KBh" secondAttribute="bottom" id="KpD-ek-PMX"/>
+                                        <constraint firstItem="nab-G4-bvP" firstAttribute="leading" secondItem="Rf4-qP-nv9" secondAttribute="leadingMargin" id="Lr9-T2-Ctn"/>
+                                        <constraint firstItem="FPn-Ia-pxz" firstAttribute="leading" secondItem="Rf4-qP-nv9" secondAttribute="leadingMargin" id="OZj-fv-LFR"/>
+                                        <constraint firstItem="edK-Rv-KBh" firstAttribute="leading" secondItem="Rf4-qP-nv9" secondAttribute="leadingMargin" id="QZP-aG-Xf6"/>
+                                        <constraint firstItem="edK-Rv-KBh" firstAttribute="top" secondItem="Rf4-qP-nv9" secondAttribute="topMargin" id="YPV-wP-XnN"/>
+                                        <constraint firstItem="nab-G4-bvP" firstAttribute="top" secondItem="FPn-Ia-pxz" secondAttribute="bottom" constant="8" id="nQ8-ed-XkY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="i87-Tv-yzK" id="Jsk-mp-yuS"/>
+                            <outlet property="delegate" destination="i87-Tv-yzK" id="mgr-hT-8BJ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="History" image="historyTabIcon" id="l4Z-fR-OmZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6o-QI-MNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="1735"/>
+        </scene>
+        <!--History Daily Review Controller-->
         <scene sceneID="0lX-Bz-Mta">
             <objects>
-                <viewController id="5Dj-Xe-F47" sceneMemberID="viewController">
+                <viewController title="History Daily Review Controller" id="5Dj-Xe-F47" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fec-I8-aNb"/>
                         <viewControllerLayoutGuide type="bottom" id="c86-HV-7HQ"/>
@@ -468,6 +585,12 @@ Calories</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nutrition intake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djS-eD-wj2">
+                                <rect key="frame" x="20" y="289" width="560" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Energy intake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayF-mA-hAZ">
                                 <rect key="frame" x="20" y="184" width="126" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -480,10 +603,6 @@ Calories</string>
                                 <color key="textColor" red="0.29411764709999999" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="10" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gu5-om-oda">
-                                <rect key="frame" x="20" y="249" width="560" height="10"/>
-                                <color key="tintColor" red="0.95294117647058818" green="0.27058823529411763" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
-                            </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DSi-4f-8nu">
                                 <rect key="frame" x="223" y="279" width="560" height="42"/>
                                 <subviews>
@@ -501,6 +620,10 @@ Calories</string>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="10" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gu5-om-oda">
+                                <rect key="frame" x="20" y="249" width="560" height="10"/>
+                                <color key="tintColor" red="0.95294117647058818" green="0.27058823529411763" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
