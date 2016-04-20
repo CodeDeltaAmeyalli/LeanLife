@@ -12,6 +12,8 @@ class AddViewController: UIViewController {
     
     //MARK: Properties 
     
+    @IBOutlet weak var mealNameTextField: UITextField!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     var meal: Meal? 
 
     override func viewDidLoad() {
@@ -26,14 +28,18 @@ class AddViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    
+    // MARK:  Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if saveButton === sender {
+            
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+  
 
 }

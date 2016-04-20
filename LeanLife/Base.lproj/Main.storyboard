@@ -1610,6 +1610,10 @@ Calories</string>
                             <constraint firstItem="PFp-QB-FuL" firstAttribute="leading" secondItem="R2i-dm-gLN" secondAttribute="leadingMargin" id="v1c-cM-ABX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mealNameTextField" destination="fol-mM-bQI" id="NJK-lN-84P"/>
+                        <outlet property="saveButton" destination="wEQ-ue-Qwd" id="OJN-0d-5l2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6k-cZ-CyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
