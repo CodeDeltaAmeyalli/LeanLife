@@ -1343,8 +1343,8 @@ Calories</string>
         <image name="defaultImage" width="100" height="96"/>
         <image name="defaultProfileInfoPhoto" width="100" height="102"/>
         <image name="emptyStomach" width="247" height="306"/>
-        <image name="first" width="30" height="30"/>
         <image name="fullStomach" width="100" height="123"/>
+        <image name="goalStablishmentTabIcon" width="32" height="32"/>
         <image name="historyTabIcon" width="25" height="25"/>
         <image name="imageProfilePhotoTabIcon" width="25" height="25"/>
         <image name="ruleTabIconMeasurements" width="32" height="32"/>
