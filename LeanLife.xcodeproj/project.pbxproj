@@ -89,6 +89,12 @@
 				046E8EC31CC30A100080070D /* Assets.xcassets */,
 				046E8EC51CC30A100080070D /* LaunchScreen.storyboard */,
 				046E8EC81CC30A100080070D /* Info.plist */,
+				04D69FF71CC7CA8700FF31A1 /* MealsTableViewController.swift */,
+				04D69FF91CC7CAA300FF31A1 /* FoodsTableViewController.swift */,
+				04D69FFB1CC7CB3C00FF31A1 /* MealsTableViewCell.swift */,
+				04D69FFD1CC7CB5700FF31A1 /* FoodsTableViewCell.swift */,
+				04D69FFF1CC7CD4D00FF31A1 /* Meals.swift */,
+				04D6A0011CC7D63800FF31A1 /* Day.swift */,
 			);
 			path = LeanLife;
 			sourceTree = "<group>";
@@ -152,7 +158,7 @@
 				TargetAttributes = {
 					046E8EB61CC30A0F0080070D = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 9UTQZ55TKK;
+						DevelopmentTeam = 89CTK9P9G9;
 					};
 					046E8ECC1CC30A100080070D = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -205,8 +211,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D6A0001CC7CD4D00FF31A1 /* Meals.swift in Sources */,
+				04D69FFA1CC7CAA300FF31A1 /* FoodsTableViewController.swift in Sources */,
 				046E8EBF1CC30A0F0080070D /* SecondViewController.swift in Sources */,
+				04D69FFC1CC7CB3C00FF31A1 /* MealsTableViewCell.swift in Sources */,
 				046E8EBB1CC30A0F0080070D /* AppDelegate.swift in Sources */,
+				04D6A0021CC7D63800FF31A1 /* Day.swift in Sources */,
+				04D69FFE1CC7CB5700FF31A1 /* FoodsTableViewCell.swift in Sources */,
+				04D69FF81CC7CA8700FF31A1 /* MealsTableViewController.swift in Sources */,
 				046E8EBD1CC30A0F0080070D /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +353,7 @@
 				INFOPLIST_FILE = LeanLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -356,7 +368,7 @@
 				INFOPLIST_FILE = LeanLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
