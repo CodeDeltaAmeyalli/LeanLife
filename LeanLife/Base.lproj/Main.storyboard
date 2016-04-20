@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="35v-dx-tiM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aLh-Gs-BC2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-932"/>
+            <point key="canvasLocation" x="722" y="-968"/>
         </scene>
         <!--Goal-->
         <scene sceneID="mEf-4j-lQX">
@@ -246,7 +246,94 @@ you should consume per day...</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldO-Hs-boy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="1085"/>
+            <point key="canvasLocation" x="84" y="322"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="U2w-fw-bsb">
+            <objects>
+                <viewController id="aLh-Gs-BC2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AqP-UJ-1Q5"/>
+                        <viewControllerLayoutGuide type="bottom" id="vrg-UJ-r65"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OIv-cR-DXm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="5QZ-Eo-61Z">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="s89-j5-fha"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                    <color key="textColor" red="0.98678870225152804" green="1" blue="0.98867043438014934" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Lean Life" id="tjS-k6-NqS">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="save" id="jF7-zo-8Lh"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-d1-iFV">
+                                <rect key="frame" x="253" y="130" width="100" height="420"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="IconPerfilMenu" translatesAutoresizingMaskIntoConstraints="NO" id="Zq3-yJ-WnB">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Zq3-yJ-WnB" secondAttribute="height" multiplier="79:75" id="BWg-qO-akg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tw-ju-4Pj">
+                                        <rect key="frame" x="0.0" y="107" width="100" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="IconProgresoMenu" translatesAutoresizingMaskIntoConstraints="NO" id="hgB-T8-clU">
+                                        <rect key="frame" x="0.0" y="157" width="100" height="71"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hgB-T8-clU" secondAttribute="height" multiplier="86:61" id="227-Hk-CHY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44Q-5V-2rr">
+                                        <rect key="frame" x="0.0" y="240" width="100" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="IconBusquedaMenu" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-aR-Qeg">
+                                        <rect key="frame" x="0.0" y="281" width="100" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="nxO-aR-Qeg" secondAttribute="height" multiplier="75:73" id="pCp-d0-Fgq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lse-i3-o8a">
+                                        <rect key="frame" x="0.0" y="391" width="100" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="9cq-6R-KDu"/>
+                                    <constraint firstAttribute="width" secondItem="gMN-d1-iFV" secondAttribute="height" multiplier="47:197" id="cR4-YV-tOg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5QZ-Eo-61Z" firstAttribute="top" secondItem="OIv-cR-DXm" secondAttribute="topMargin" id="8Uc-qM-49J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5QZ-Eo-61Z" secondAttribute="trailing" constant="-20" id="I4R-3N-sSv"/>
+                            <constraint firstItem="5QZ-Eo-61Z" firstAttribute="leading" secondItem="OIv-cR-DXm" secondAttribute="leadingMargin" constant="-20" id="Odn-eX-rrx"/>
+                            <constraint firstItem="gMN-d1-iFV" firstAttribute="centerX" secondItem="OIv-cR-DXm" secondAttribute="centerX" id="Wqn-Fj-zeB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omi-Qa-kFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1193" y="334"/>
         </scene>
         <!--Shapes View Controller-->
         <scene sceneID="JGu-dA-mvq">
@@ -355,7 +442,7 @@ you should consume per day...</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8M-Fl-tMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="382"/>
+            <point key="canvasLocation" x="722" y="322"/>
         </scene>
         <!--Measurements View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -494,7 +581,7 @@ you should consume per day...</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-262"/>
+            <point key="canvasLocation" x="722" y="-326"/>
         </scene>
         <!--My Daily Progress Controller -->
         <scene sceneID="v9X-kJ-rI4">
@@ -721,7 +808,7 @@ Calories</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-388" y="-596"/>
         </scene>
         <!--Status Tab Controller -->
         <scene sceneID="EjJ-bP-k93">
@@ -739,7 +826,7 @@ Calories</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9I-vB-bOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1085"/>
+            <point key="canvasLocation" x="-354" y="1117"/>
         </scene>
         <!--History Table View Controller-->
         <scene sceneID="FsE-gk-jLK">
@@ -859,7 +946,7 @@ Calories</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6o-QI-MNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573" y="1923"/>
+            <point key="canvasLocation" x="1365" y="1771"/>
         </scene>
         <!--History Daily Review Controller-->
         <scene sceneID="0lX-Bz-Mta">
@@ -1016,7 +1103,7 @@ Calories</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ful-w4-CXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3170" y="1923"/>
+            <point key="canvasLocation" x="3162" y="1759"/>
         </scene>
         <!--History-->
         <scene sceneID="xb9-Ov-sDx">
@@ -1035,7 +1122,7 @@ Calories</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdz-IG-5Jg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1923"/>
+            <point key="canvasLocation" x="506" y="1783"/>
         </scene>
         <!--History -->
         <scene sceneID="lba-cS-1PK">
@@ -1054,10 +1141,13 @@ Calories</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbB-QB-2cJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2378" y="1923"/>
+            <point key="canvasLocation" x="2266" y="1759"/>
         </scene>
     </scenes>
     <resources>
+        <image name="IconBusquedaMenu" width="75" height="73"/>
+        <image name="IconPerfilMenu" width="79" height="75"/>
+        <image name="IconProgresoMenu" width="86" height="61"/>
         <image name="bodyShapeTabIcon" width="32" height="32"/>
         <image name="dailyProgressTabIcon" width="25" height="25"/>
         <image name="defaultProfileInfoPhoto" width="100" height="102"/>
