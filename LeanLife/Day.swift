@@ -35,6 +35,7 @@ class Day {
         self.goal = goal
         self.usersName = usersName
         self.usersPhoto = usersPhoto
+        
     }
     
     

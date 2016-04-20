@@ -30,6 +30,10 @@ class Meal {
         self.carbohydrates = carbohydrates
         self.fat = fat
         self.calories = calories
+        
+        if name.isEmpty || quantity < 0 || proteins < 0 || carbohydrates < 0 || fat < 0 || calories < 0 {
+            return nil 
+        }
     }
    
     

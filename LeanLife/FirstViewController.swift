@@ -9,6 +9,17 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    //MARK: Actions
+    
+    //MARK: Navigation
+    
+    @IBAction func menuProfileButton(sender: UIBarButtonItem) {
+        
+    
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

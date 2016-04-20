@@ -125,6 +125,9 @@
                                     <navigationItem title="Profile" id="vKy-L4-fJ8">
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="dXf-zD-gEz">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="menuProfileButton:" destination="9pv-A4-QxB" id="sGQ-Tm-GCM"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -326,6 +329,7 @@ you should consume per day...</string>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXD-hF-zEx">
                                         <rect key="frame" x="0.0" y="0.0" width="96" height="91"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="profileButton"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="RXD-hF-zEx" secondAttribute="height" multiplier="79:75" id="dpM-PO-ubN"/>
                                         </constraints>
@@ -1103,7 +1107,7 @@ Calories</string>
         <!--History Daily Review Controller-->
         <scene sceneID="0lX-Bz-Mta">
             <objects>
-                <viewController title="History Daily Review Controller" id="5Dj-Xe-F47" sceneMemberID="viewController">
+                <viewController title="History Daily Review Controller" id="5Dj-Xe-F47" customClass="HistoryDailyReviewViewController" customModule="LeanLife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fec-I8-aNb"/>
                         <viewControllerLayoutGuide type="bottom" id="c86-HV-7HQ"/>
@@ -1335,7 +1339,7 @@ Calories</string>
         <!--Add New Meal View Controller -->
         <scene sceneID="ZzZ-A8-lmL">
             <objects>
-                <viewController title="Add New Meal View Controller " id="DbY-Y7-H3b" sceneMemberID="viewController">
+                <viewController title="Add New Meal View Controller " id="DbY-Y7-H3b" customClass="AddViewController" customModule="LeanLife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xLw-YL-KWe"/>
                         <viewControllerLayoutGuide type="bottom" id="UxG-57-9Em"/>
@@ -1636,6 +1640,6 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0wD-2Q-AuV"/>
+        <segue reference="gpG-or-jOH"/>
     </inferredMetricsTieBreakers>
 </document>
