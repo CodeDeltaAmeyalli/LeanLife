@@ -21,15 +21,15 @@
                                 <rect key="frame" x="156" y="109" width="288" height="101"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FoodWelcome" translatesAutoresizingMaskIntoConstraints="NO" id="OOx-hQ-NeP">
-                                <rect key="frame" x="113" y="243" width="374" height="97"/>
+                                <rect key="frame" x="113" y="251" width="374" height="97"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.75294117650000003" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="rex-vs-2eK" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="155" id="JZz-cL-wAa"/>
-                            <constraint firstItem="d5n-uV-tTz" firstAttribute="top" secondItem="rex-vs-2eK" secondAttribute="bottom" constant="33" id="MZg-AW-Cbg"/>
-                            <constraint firstItem="d5n-uV-tTz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OJN-dn-S8S"/>
-                            <constraint firstItem="rex-vs-2eK" firstAttribute="centerX" secondItem="d5n-uV-tTz" secondAttribute="centerX" id="Yyf-dD-kOg"/>
+                            <constraint firstItem="OOx-hQ-NeP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4qP-ko-Ctd"/>
+                            <constraint firstItem="xbj-In-fpe" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Aoo-TE-taM"/>
+                            <constraint firstItem="OOx-hQ-NeP" firstAttribute="top" secondItem="xbj-In-fpe" secondAttribute="bottom" constant="41" id="Yqi-3g-DYp"/>
+                            <constraint firstItem="OOx-hQ-NeP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZyN-YH-9tf"/>
                         </constraints>
                     </view>
                 </viewController>
