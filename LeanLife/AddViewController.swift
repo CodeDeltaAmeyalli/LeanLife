@@ -9,6 +9,10 @@
 import UIKit
 
 class AddViewController: UIViewController {
+    
+    //MARK: Properties 
+    
+    var meal: Meal? 
 
     override func viewDidLoad() {
         super.viewDidLoad()
