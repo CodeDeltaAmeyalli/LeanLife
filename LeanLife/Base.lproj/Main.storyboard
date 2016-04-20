@@ -286,7 +286,7 @@ you should consume per day...</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldO-Hs-boy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84" y="322"/>
+            <point key="canvasLocation" x="6" y="753"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="U2w-fw-bsb">
