@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -19,15 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultProfileInfoPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-vg-P2u">
-                                <rect key="frame" x="214" y="137" width="172" height="175"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="175" id="1j1-lX-VDW"/>
-                                    <constraint firstAttribute="width" constant="200" id="a9n-7V-SOw"/>
-                                    <constraint firstAttribute="height" constant="204" id="fO5-Fa-qvB"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="kuh-jB-PnU"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Wrg-Ib-Okk">
                                 <rect key="frame" x="20" y="353" width="560" height="154"/>
                                 <subviews>
@@ -126,12 +117,22 @@
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="dXf-zD-gEz">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="menuProfileButton:" destination="9pv-A4-QxB" id="sGQ-Tm-GCM"/>
+                                                <action selector="menuProfileSegue:" destination="9pv-A4-QxB" id="rwd-XL-VMN"/>
+                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="profileToMainMenuUnwind" id="gen-p2-IiF"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultProfileInfoPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-vg-P2u">
+                                <rect key="frame" x="214" y="134" width="172" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="175" id="1j1-lX-VDW"/>
+                                    <constraint firstAttribute="width" constant="200" id="a9n-7V-SOw"/>
+                                    <constraint firstAttribute="height" constant="204" id="fO5-Fa-qvB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="kuh-jB-PnU"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -147,6 +148,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="imageProfilePhotoTabIcon" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="dFd-vg-P2u" id="5Ri-ub-e0l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,6 +266,9 @@ you should consume per day...</string>
                                     <navigationItem title="Goal" id="QOy-5u-0XN">
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="i6e-5T-4r2">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="goalToMainMenuUnwind" id="qbt-Cn-SOb"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ELW-nj-G4k">
                                             <color key="tintColor" red="0.97406525320222515" green="1" blue="0.97482578104381423" alpha="1" colorSpace="calibratedRGB"/>
@@ -403,10 +410,15 @@ you should consume per day...</string>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="mainMenuProfileButton" destination="RXD-hF-zEx" id="Q55-eX-a0d"/>
+                        <outlet property="mainMenuProgressButton" destination="DXh-DC-wIU" id="po9-pG-gHH"/>
+                        <outlet property="mainMenuSearchButton" destination="lSH-hH-5Ts" id="Bcs-UV-Iky"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omi-Qa-kFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1561" y="743"/>
+            <point key="canvasLocation" x="-1839" y="699"/>
         </scene>
         <!--Shapes View Controller-->
         <scene sceneID="JGu-dA-mvq">
@@ -431,6 +443,9 @@ you should consume per day...</string>
                                     <navigationItem title="Body Shape" id="3M0-Jo-THS">
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="p2D-Ik-FdZ">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="shapeToMainMenuUnwind" id="Xce-aa-aD9"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -656,6 +671,9 @@ you should consume per day...</string>
                                     <navigationItem title="Measurements" id="8Vq-GT-9NJ">
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="SFH-uU-cxn">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="measurementsToMainMenuUnwind" id="R20-X4-ZYh"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -685,6 +703,7 @@ you should consume per day...</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Measurements" image="ruleTabIconMeasurements" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="activityPickerView" destination="csY-qR-GeS" id="Lvg-9o-cZc"/>
                         <outlet property="pickerActivity" destination="csY-qR-GeS" id="ei6-EB-jvU"/>
                     </connections>
                 </viewController>
@@ -867,6 +886,9 @@ Calories</string>
                             </progressView>
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="LjT-Tk-3Lb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="upV-st-Gi5"/>
+                                </constraints>
                                 <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -876,6 +898,9 @@ Calories</string>
                                     <navigationItem title="Progress" id="T6F-oI-9s0">
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="Fvt-vI-cFc">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="dailyProgressToMainMenuUnwind" id="78r-Vj-8Js"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PNj-tG-YJr">
                                             <color key="tintColor" red="0.97644777245579595" green="0.96581476582084769" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -885,6 +910,11 @@ Calories</string>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="upV-st-Gi5"/>
+                                    </mask>
+                                </variation>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1097,6 +1127,9 @@ Calories</string>
                     <navigationItem key="navigationItem" title="Your History" id="Ql3-8W-66H">
                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="Awj-Uc-OeR">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="aLh-Gs-BC2" kind="show" identifier="historyTableViewToMainMenuUnwind" id="tUB-cB-FsG"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -1258,6 +1291,9 @@ Calories</string>
                     <navigationItem key="navigationItem" title="Your Date" id="Er2-Kh-GUM">
                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="1hC-bZ-S2M">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="aLh-Gs-BC2" kind="show" identifier="dailyReviewToMainMenuUnwind" id="x2M-3c-NRg"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -1323,6 +1359,9 @@ Calories</string>
                     <navigationItem key="navigationItem" title="Meals" id="y2q-9I-lVa">
                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="czt-l3-e8J">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="aLh-Gs-BC2" kind="show" identifier="mealsToMainMenuUnwind" id="l0X-96-X9i"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xf-Tm-9mF">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -1640,6 +1679,7 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="l0X-96-X9i"/>
         <segue reference="gpG-or-jOH"/>
     </inferredMetricsTieBreakers>
 </document>

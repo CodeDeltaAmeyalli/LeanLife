@@ -27,7 +27,6 @@
 		04D69FF81CC7CA8700FF31A1 /* HistoryMealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D69FF71CC7CA8700FF31A1 /* HistoryMealsTableViewController.swift */; };
 		04D69FFA1CC7CAA300FF31A1 /* FoodsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D69FF91CC7CAA300FF31A1 /* FoodsTableViewController.swift */; };
 		04D69FFC1CC7CB3C00FF31A1 /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D69FFB1CC7CB3C00FF31A1 /* MealsTableViewCell.swift */; };
-		04D69FFE1CC7CB5700FF31A1 /* FoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D69FFD1CC7CB5700FF31A1 /* FoodsTableViewCell.swift */; };
 		04D6A0001CC7CD4D00FF31A1 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D69FFF1CC7CD4D00FF31A1 /* Meals.swift */; };
 		04D6A0021CC7D63800FF31A1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6A0011CC7D63800FF31A1 /* Day.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +66,6 @@
 		04D69FF71CC7CA8700FF31A1 /* HistoryMealsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryMealsTableViewController.swift; sourceTree = "<group>"; };
 		04D69FF91CC7CAA300FF31A1 /* FoodsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsTableViewController.swift; sourceTree = "<group>"; };
 		04D69FFB1CC7CB3C00FF31A1 /* MealsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealsTableViewCell.swift; sourceTree = "<group>"; };
-		04D69FFD1CC7CB5700FF31A1 /* FoodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsTableViewCell.swift; sourceTree = "<group>"; };
 		04D69FFF1CC7CD4D00FF31A1 /* Meals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 		04D6A0011CC7D63800FF31A1 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,7 +126,6 @@
 				04D69FF91CC7CAA300FF31A1 /* FoodsTableViewController.swift */,
 				0482B25C1CC7FBE3001F436C /* AddViewController.swift */,
 				04D69FFB1CC7CB3C00FF31A1 /* MealsTableViewCell.swift */,
-				04D69FFD1CC7CB5700FF31A1 /* FoodsTableViewCell.swift */,
 				04D69FFF1CC7CD4D00FF31A1 /* Meals.swift */,
 				04D6A0011CC7D63800FF31A1 /* Day.swift */,
 				0482B25E1CC7FC5F001F436C /* Profile.swift */,
@@ -265,7 +262,6 @@
 				0482B25F1CC7FC5F001F436C /* Profile.swift in Sources */,
 				0482B2531CC7EFB9001F436C /* MainMenuViewController.swift in Sources */,
 				0482B25B1CC7F947001F436C /* HistoryDailyReviewViewController.swift in Sources */,
-				04D69FFE1CC7CB5700FF31A1 /* FoodsTableViewCell.swift in Sources */,
 				0482B2551CC7F01F001F436C /* GoalViewController.swift in Sources */,
 				0482B2611CC7FC73001F436C /* Measurements.swift in Sources */,
 				04D69FF81CC7CA8700FF31A1 /* HistoryMealsTableViewController.swift in Sources */,

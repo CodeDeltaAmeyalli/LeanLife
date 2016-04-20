@@ -9,6 +9,16 @@
 import UIKit
 
 class MainMenuViewController: UIViewController {
+    
+    @IBOutlet weak var mainMenuProfileButton: UIButton!
+    @IBOutlet weak var mainMenuSearchButton: UIButton!
+    @IBOutlet weak var mainMenuProgressButton: UIButton!
+    
+    //MARK: Actions 
+
+    
+
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
