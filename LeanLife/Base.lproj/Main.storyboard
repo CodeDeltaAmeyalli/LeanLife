@@ -118,7 +118,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <color key="textColor" red="0.99708093302254852" green="1" blue="0.97912787569869997" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
@@ -252,13 +252,16 @@ you should consume per day...</string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <color key="textColor" red="0.98647826540615735" green="0.9908238981530304" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Goal" id="QOy-5u-0XN">
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="i6e-5T-4r2">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ELW-nj-G4k">
+                                            <color key="tintColor" red="0.97406525320222515" green="1" blue="0.97482578104381423" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -298,7 +301,7 @@ you should consume per day...</string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <color key="textColor" red="0.96320245673920479" green="1" blue="0.99585913264640291" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
@@ -523,7 +526,7 @@ you should consume per day...</string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <color key="textColor" red="1" green="0.9862160664627263" blue="0.9686163738987974" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
@@ -743,13 +746,16 @@ Calories</string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <color key="textColor" red="0.94637085655072395" green="1" blue="0.95240701692454477" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Progress" id="T6F-oI-9s0">
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="Fvt-vI-cFc">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PNj-tG-YJr">
+                                            <color key="tintColor" red="0.97644777245579595" green="0.96581476582084769" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1152,7 +1158,7 @@ Calories</string>
             </objects>
             <point key="canvasLocation" x="750" y="1923"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Meals-->
         <scene sceneID="eZ8-NF-zGa">
             <objects>
                 <tableViewController id="YfH-Ck-MEq" sceneMemberID="viewController">
@@ -1188,8 +1194,11 @@ Calories</string>
                             <outlet property="delegate" destination="YfH-Ck-MEq" id="R8m-zf-qr7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="y2q-9I-lVa">
+                    <navigationItem key="navigationItem" title="Meals" id="y2q-9I-lVa">
                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="czt-l3-e8J">
+                            <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xf-Tm-9mF">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -1397,6 +1406,24 @@ Calories</string>
                                 <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-XK-fJh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <color key="textColor" red="0.97644777245579595" green="0.96581476582084769" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="New Meal" id="beh-vY-duR">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9Uy-mr-bwE">
+                                            <color key="tintColor" red="0.97644777245579595" green="0.96581476582084769" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="wEQ-ue-Qwd">
+                                            <color key="tintColor" red="0.97644777245579595" green="0.96581476582084769" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
