@@ -14,6 +14,7 @@
 		046E8EC41CC30A100080070D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046E8EC31CC30A100080070D /* Assets.xcassets */; };
 		046E8EC71CC30A100080070D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E8EC51CC30A100080070D /* LaunchScreen.storyboard */; };
 		046E8ED21CC30A100080070D /* LeanLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E8ED11CC30A100080070D /* LeanLifeTests.swift */; };
+		048CC1C81CC71473007EF0F9 /* master_of_break.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CC1C71CC71473007EF0F9 /* master_of_break.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		046E8ECD1CC30A100080070D /* LeanLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		046E8ED11CC30A100080070D /* LeanLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanLifeTests.swift; sourceTree = "<group>"; };
 		046E8ED31CC30A100080070D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048CC1C71CC71473007EF0F9 /* master_of_break.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = master_of_break.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				046E8EBA1CC30A0F0080070D /* AppDelegate.swift */,
 				046E8EBC1CC30A0F0080070D /* FirstViewController.swift */,
 				046E8EBE1CC30A0F0080070D /* SecondViewController.swift */,
+				048CC1C71CC71473007EF0F9 /* master_of_break.ttf */,
 				046E8EC01CC30A100080070D /* Main.storyboard */,
 				046E8EC31CC30A100080070D /* Assets.xcassets */,
 				046E8EC51CC30A100080070D /* LaunchScreen.storyboard */,
@@ -184,6 +187,7 @@
 				046E8EC71CC30A100080070D /* LaunchScreen.storyboard in Resources */,
 				046E8EC41CC30A100080070D /* Assets.xcassets in Resources */,
 				046E8EC21CC30A100080070D /* Main.storyboard in Resources */,
+				048CC1C81CC71473007EF0F9 /* master_of_break.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
