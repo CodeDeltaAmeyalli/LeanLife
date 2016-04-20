@@ -19,6 +19,7 @@
 		04D69FFC1CC7CB3C00FF31A1 /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D69FFB1CC7CB3C00FF31A1 /* MealsTableViewCell.swift */; };
 		04D69FFE1CC7CB5700FF31A1 /* FoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D69FFD1CC7CB5700FF31A1 /* FoodsTableViewCell.swift */; };
 		04D6A0001CC7CD4D00FF31A1 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D69FFF1CC7CD4D00FF31A1 /* Meals.swift */; };
+		04D6A0021CC7D63800FF31A1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6A0011CC7D63800FF31A1 /* Day.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		04D69FFB1CC7CB3C00FF31A1 /* MealsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealsTableViewCell.swift; sourceTree = "<group>"; };
 		04D69FFD1CC7CB5700FF31A1 /* FoodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsTableViewCell.swift; sourceTree = "<group>"; };
 		04D69FFF1CC7CD4D00FF31A1 /* Meals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		04D6A0011CC7D63800FF31A1 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				04D69FFB1CC7CB3C00FF31A1 /* MealsTableViewCell.swift */,
 				04D69FFD1CC7CB5700FF31A1 /* FoodsTableViewCell.swift */,
 				04D69FFF1CC7CD4D00FF31A1 /* Meals.swift */,
+				04D6A0011CC7D63800FF31A1 /* Day.swift */,
 			);
 			path = LeanLife;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				046E8EBF1CC30A0F0080070D /* SecondViewController.swift in Sources */,
 				04D69FFC1CC7CB3C00FF31A1 /* MealsTableViewCell.swift in Sources */,
 				046E8EBB1CC30A0F0080070D /* AppDelegate.swift in Sources */,
+				04D6A0021CC7D63800FF31A1 /* Day.swift in Sources */,
 				04D69FFE1CC7CB5700FF31A1 /* FoodsTableViewCell.swift in Sources */,
 				04D69FF81CC7CA8700FF31A1 /* MealsTableViewController.swift in Sources */,
 				046E8EBD1CC30A0F0080070D /* FirstViewController.swift in Sources */,
