@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -152,7 +152,7 @@
         <!--Goal-->
         <scene sceneID="mEf-4j-lQX">
             <objects>
-                <viewController id="M9t-Zg-8bE" sceneMemberID="viewController">
+                <viewController id="M9t-Zg-8bE" customClass="GoalViewController" customModule="LeanLife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h89-4A-Gt3"/>
                         <viewControllerLayoutGuide type="bottom" id="8oK-cf-nxJ"/>
@@ -263,7 +263,7 @@ you should consume per day...</string>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ELW-nj-G4k">
                                             <color key="tintColor" red="0.97406525320222515" green="1" blue="0.97482578104381423" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="DbY-Y7-H3b" kind="showDetail" id="sHX-L5-ICq"/>
+                                                <segue destination="DbY-Y7-H3b" kind="showDetail" identifier="goalToAddSegue" id="sHX-L5-ICq"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -288,10 +288,10 @@ you should consume per day...</string>
             </objects>
             <point key="canvasLocation" x="-242" y="353"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="U2w-fw-bsb">
             <objects>
-                <viewController id="aLh-Gs-BC2" sceneMemberID="viewController">
+                <viewController id="aLh-Gs-BC2" customClass="MainMenuViewController" customModule="LeanLife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AqP-UJ-1Q5"/>
                         <viewControllerLayoutGuide type="bottom" id="vrg-UJ-r65"/>
@@ -312,45 +312,62 @@ you should consume per day...</string>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Lean Life" id="tjS-k6-NqS">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="save" id="jF7-zo-8Lh"/>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Oub-9b-80S">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="DbY-Y7-H3b" kind="showDetail" identifier="menuToAddSegue" id="gpG-or-jOH"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-d1-iFV">
-                                <rect key="frame" x="253" y="130" width="100" height="420"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-d1-iFV">
+                                <rect key="frame" x="253" y="130" width="96" height="420"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="IconPerfilMenu" translatesAutoresizingMaskIntoConstraints="NO" id="Zq3-yJ-WnB">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="95"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXD-hF-zEx">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="91"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Zq3-yJ-WnB" secondAttribute="height" multiplier="79:75" id="BWg-qO-akg"/>
+                                            <constraint firstAttribute="width" secondItem="RXD-hF-zEx" secondAttribute="height" multiplier="79:75" id="dpM-PO-ubN"/>
                                         </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tw-ju-4Pj">
-                                        <rect key="frame" x="0.0" y="107" width="100" height="38"/>
+                                        <state key="normal" image="IconPerfilMenu"/>
+                                        <connections>
+                                            <segue destination="49e-Tb-3d3" kind="showDetail" identifier="menuToProfileSegue" id="ImG-o6-EDt"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tw-ju-4Pj">
+                                        <rect key="frame" x="0.0" y="103" width="96" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="IconProgresoMenu" translatesAutoresizingMaskIntoConstraints="NO" id="hgB-T8-clU">
-                                        <rect key="frame" x="0.0" y="157" width="100" height="71"/>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="98" placeholderIntrinsicHeight="61" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXh-DC-wIU">
+                                        <rect key="frame" x="0.0" y="144" width="96" height="89"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="hgB-T8-clU" secondAttribute="height" multiplier="86:61" id="227-Hk-CHY"/>
+                                            <constraint firstAttribute="width" secondItem="DXh-DC-wIU" secondAttribute="height" multiplier="86:81" id="BSg-OU-SbB"/>
                                         </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44Q-5V-2rr">
-                                        <rect key="frame" x="0.0" y="240" width="100" height="29"/>
+                                        <state key="normal" image="IconProgresoMenu"/>
+                                        <connections>
+                                            <segue destination="35v-dx-tiM" kind="showDetail" identifier="menuToProgressSegue" id="mNw-TM-vTU"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44Q-5V-2rr">
+                                        <rect key="frame" x="0.0" y="245" width="96" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="IconBusquedaMenu" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-aR-Qeg">
-                                        <rect key="frame" x="0.0" y="281" width="100" height="98"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSH-hH-5Ts">
+                                        <rect key="frame" x="0.0" y="286" width="96" height="93"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="nxO-aR-Qeg" secondAttribute="height" multiplier="75:73" id="pCp-d0-Fgq"/>
+                                            <constraint firstAttribute="width" secondItem="lSH-hH-5Ts" secondAttribute="height" multiplier="75:73" id="cFe-yZ-oUB"/>
                                         </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lse-i3-o8a">
-                                        <rect key="frame" x="0.0" y="391" width="100" height="29"/>
+                                        <state key="normal" image="IconBusquedaMenu"/>
+                                        <connections>
+                                            <segue destination="HqL-KW-qa1" kind="showDetail" identifier="menuToSearchSegue" id="DId-q5-NnS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lse-i3-o8a">
+                                        <rect key="frame" x="0.0" y="391" width="96" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -360,6 +377,11 @@ you should consume per day...</string>
                                     <constraint firstAttribute="height" constant="420" id="9cq-6R-KDu"/>
                                     <constraint firstAttribute="width" secondItem="gMN-d1-iFV" secondAttribute="height" multiplier="47:197" id="cR4-YV-tOg"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cR4-YV-tOg"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -367,18 +389,25 @@ you should consume per day...</string>
                             <constraint firstItem="5QZ-Eo-61Z" firstAttribute="top" secondItem="OIv-cR-DXm" secondAttribute="topMargin" id="8Uc-qM-49J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5QZ-Eo-61Z" secondAttribute="trailing" constant="-20" id="I4R-3N-sSv"/>
                             <constraint firstItem="5QZ-Eo-61Z" firstAttribute="leading" secondItem="OIv-cR-DXm" secondAttribute="leadingMargin" constant="-20" id="Odn-eX-rrx"/>
+                            <constraint firstItem="gMN-d1-iFV" firstAttribute="centerX" secondItem="OIv-cR-DXm" secondAttribute="centerX" id="VeJ-wC-mv2"/>
                             <constraint firstItem="gMN-d1-iFV" firstAttribute="centerX" secondItem="OIv-cR-DXm" secondAttribute="centerX" id="Wqn-Fj-zeB"/>
+                            <constraint firstItem="gMN-d1-iFV" firstAttribute="top" secondItem="5QZ-Eo-61Z" secondAttribute="bottom" constant="30" id="YnC-iW-y3I"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Wqn-Fj-zeB"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omi-Qa-kFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1598" y="853"/>
+            <point key="canvasLocation" x="-1561" y="743"/>
         </scene>
         <!--Shapes View Controller-->
         <scene sceneID="JGu-dA-mvq">
             <objects>
-                <viewController title="Shapes View Controller" id="xNe-gQ-lEc" sceneMemberID="viewController">
+                <viewController title="Shapes View Controller" id="xNe-gQ-lEc" customClass="ShapeViewController" customModule="LeanLife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iN3-lE-dyG"/>
                         <viewControllerLayoutGuide type="bottom" id="cVr-Cd-luf"/>
@@ -662,7 +691,7 @@ you should consume per day...</string>
         <!--My Daily Progress Controller -->
         <scene sceneID="v9X-kJ-rI4">
             <objects>
-                <viewController title="My Daily Progress Controller " id="MsX-b3-XGH" sceneMemberID="viewController">
+                <viewController title="My Daily Progress Controller " id="MsX-b3-XGH" customClass="DailyProgressViewController" customModule="LeanLife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aif-bD-0zd"/>
                         <viewControllerLayoutGuide type="bottom" id="XXa-B6-291"/>
@@ -847,7 +876,7 @@ Calories</string>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PNj-tG-YJr">
                                             <color key="tintColor" red="0.97644777245579595" green="0.96581476582084769" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="DbY-Y7-H3b" kind="showDetail" id="0wD-2Q-AuV"/>
+                                                <segue destination="DbY-Y7-H3b" kind="showDetail" identifier="dailyProgressToAddSegue" id="0wD-2Q-AuV"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -927,7 +956,7 @@ Calories</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="-596"/>
+            <point key="canvasLocation" x="-146" y="-682"/>
         </scene>
         <!--Status Tab Controller -->
         <scene sceneID="EjJ-bP-k93">
@@ -950,7 +979,7 @@ Calories</string>
         <!--History Table View Controller-->
         <scene sceneID="FsE-gk-jLK">
             <objects>
-                <tableViewController title="History Table View Controller" id="i87-Tv-yzK" sceneMemberID="viewController">
+                <tableViewController title="History Table View Controller" id="i87-Tv-yzK" customClass="MealsTableViewController" customModule="LeanLife" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="161" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jha-Ga-gD2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1052,7 +1081,7 @@ Calories</string>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="VDm-Oy-wfn" kind="showDetail" id="QFH-km-xV6"/>
+                                    <segue destination="VDm-Oy-wfn" kind="showDetail" identifier="historyMealsToNavigationControllerSegue" id="QFH-km-xV6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1254,7 +1283,7 @@ Calories</string>
         <!--Meals-->
         <scene sceneID="eZ8-NF-zGa">
             <objects>
-                <tableViewController id="YfH-Ck-MEq" sceneMemberID="viewController">
+                <tableViewController id="YfH-Ck-MEq" customClass="FoodsTableViewController" customModule="LeanLife" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wHZ-99-DgA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1294,7 +1323,7 @@ Calories</string>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xf-Tm-9mF">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="DbY-Y7-H3b" kind="showDetail" id="rba-vC-f6X"/>
+                                <segue destination="DbY-Y7-H3b" kind="showDetail" identifier="foodsToAddSegue" id="rba-vC-f6X"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1607,6 +1636,6 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rba-vC-f6X"/>
+        <segue reference="0wD-2Q-AuV"/>
     </inferredMetricsTieBreakers>
 </document>
