@@ -1591,13 +1591,13 @@ Calories</string>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="zi1-XS-2aR">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0aB-Nm-Zxq">
-                            <color key="tintColor" red="0.97441360474271244" green="0.99943841597776917" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancelButton:" destination="DbY-Y7-H3b" id="7by-4I-nfx"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="1s7-ce-2Np">
-                            <color key="tintColor" red="0.97441360474271244" green="0.99943841597776917" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1658,9 +1658,8 @@ Calories</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6IX-Nb-Vke">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.97441360474271244" green="0.99943841597776917" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.2901960784" green="0.75294117650000003" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1699,8 +1698,8 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tSu-mQ-773"/>
+        <segue reference="SeP-0r-Kyd"/>
         <segue reference="sHX-L5-ICq"/>
-        <segue reference="Puy-gC-ZyZ"/>
+        <segue reference="oIS-jw-ZBf"/>
     </inferredMetricsTieBreakers>
 </document>
