@@ -1124,7 +1124,7 @@ Calories</string>
                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="Awj-Uc-OeR">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="aLh-Gs-BC2" kind="show" identifier="historyToMainMenuUnwind" id="fXM-dI-H1L"/>
+                                <action selector="cancelButton:" destination="i87-Tv-yzK" id="i1f-en-uXN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1357,7 +1357,6 @@ Calories</string>
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancelButton:" destination="YfH-Ck-MEq" id="8uk-uI-wnE"/>
-                                <segue destination="aLh-Gs-BC2" kind="show" identifier="mealsSearchToMainMenuUnwind" id="Emf-7J-9Uq"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xf-Tm-9mF">
@@ -1370,7 +1369,7 @@ Calories</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtr-iR-4og" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1342" y="2605"/>
+            <point key="canvasLocation" x="-1367" y="2605"/>
         </scene>
         <!--Add New Meal View Controller -->
         <scene sceneID="ZzZ-A8-lmL">
@@ -1700,7 +1699,7 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Emf-7J-9Uq"/>
+        <segue reference="tSu-mQ-773"/>
         <segue reference="sHX-L5-ICq"/>
         <segue reference="Puy-gC-ZyZ"/>
     </inferredMetricsTieBreakers>

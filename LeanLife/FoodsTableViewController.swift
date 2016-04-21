@@ -11,7 +11,7 @@ import UIKit
 class FoodsTableViewController: UITableViewController {
 
     @IBAction func cancelButton(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
