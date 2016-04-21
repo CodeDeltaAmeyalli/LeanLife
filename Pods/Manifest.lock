@@ -1,0 +1,31 @@
+PODS:
+  - RBQFetchedResultsController (3.0.1):
+    - Realm (>= 0.95)
+  - Realm (0.98.8):
+    - Realm/Headers (= 0.98.8)
+  - Realm/Headers (0.98.8)
+  - RealmSearchViewController (1.5):
+    - RBQFetchedResultsController (>= 2.4)
+    - RealmSwift (>= 0.96)
+  - RealmSwift (0.98.8):
+    - Realm (= 0.98.8)
+  - RealmSwiftBlogData (1.0):
+    - RealmSwift (>= 0.96)
+  - TOWebViewController (2.2.3):
+    - TOWebViewController/Core (= 2.2.3)
+  - TOWebViewController/Core (2.2.3)
+
+DEPENDENCIES:
+  - RealmSearchViewController
+  - RealmSwiftBlogData
+  - TOWebViewController
+
+SPEC CHECKSUMS:
+  RBQFetchedResultsController: 4b8a80647859241abdb3da04b486a6ad02dd5093
+  Realm: 0e293bb62999730599efc3048896bbd4f2e43bcd
+  RealmSearchViewController: 4cd4122611c1f0e864ba769f6cf7bf8437f0c701
+  RealmSwift: 064262d38113f23ff3508fb20a0a922e696bec01
+  RealmSwiftBlogData: b9bac3c4a6dbe871eb6412e11c38557369063848
+  TOWebViewController: ca47b9aeefe66acb3353d197dc8270338540b116
+
+COCOAPODS: 0.39.0

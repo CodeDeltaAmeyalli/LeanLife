@@ -1,0 +1,10 @@
+use_frameworks!
+
+pod 'RealmSearchViewController'
+
+# We will also be using a few more pods too:
+# Easy UIViewController to display website
+pod 'TOWebViewController'
+
+# Pre-built data model with data culled from Realm.io Blog
+pod 'RealmSwiftBlogData'
