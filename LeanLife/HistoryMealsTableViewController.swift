@@ -9,6 +9,13 @@
 import UIKit
 
 class MealsTableViewController: UITableViewController {
+    
+    //MARK: Actions 
+    
+    @IBAction func cancelButton(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
