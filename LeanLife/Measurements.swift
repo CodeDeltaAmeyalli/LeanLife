@@ -6,15 +6,15 @@
 //  Copyright © 2016 Escuela Ameyalli. All rights reserved.
 //
 
-import UIKit
+import RealmSwift
 
-class Measurements {
+class Measurements: Object {
     
     //MARK: Properties
     dynamic var height = 3.1416
     dynamic var weight = 3.1416
     dynamic var wristMeasure = 3.1416
-    dynamic var physicalActivity = "" 
+    dynamic var physicalActivity = 1
     
    /* //MARK: Initializer
     init?(height: Double, weight: Double, wristMeasure: Double, physicalActivity: UIPickerViewDelegate ){
