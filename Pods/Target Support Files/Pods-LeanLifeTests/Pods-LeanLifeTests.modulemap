@@ -1,0 +1,6 @@
+framework module Pods_LeanLifeTests {
+  umbrella header "Pods-LeanLifeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
