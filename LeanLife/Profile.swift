@@ -6,15 +6,15 @@
 //  Copyright © 2016 Escuela Ameyalli. All rights reserved.
 //
 
-import UIKit
+import RealmSwift
 
-class Profile {
+class Profile: Object {
     
     //MARK: Properties 
-    dynamic var photo = ""
+    dynamic var photo:String? = ""
     dynamic var name = ""
     dynamic var age = 0
-    dynamic var allergies = ""
+    dynamic var allergies:String? = ""
     dynamic var gender = ""
     
    /* //MARK: Initialization
