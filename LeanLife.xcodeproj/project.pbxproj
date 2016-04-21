@@ -15,6 +15,16 @@
 		046E8EC71CC30A100080070D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E8EC51CC30A100080070D /* LaunchScreen.storyboard */; };
 		046E8ED21CC30A100080070D /* LeanLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E8ED11CC30A100080070D /* LeanLifeTests.swift */; };
 		048CC1C81CC71473007EF0F9 /* master_of_break.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CC1C71CC71473007EF0F9 /* master_of_break.ttf */; };
+		04BCAC1C1CC7EEC700D6AF6B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BCAC181CC7EEC700D6AF6B /* Realm.framework */; };
+		04BCAC1D1CC7EEC700D6AF6B /* RealmSearchViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BCAC191CC7EEC700D6AF6B /* RealmSearchViewController.framework */; };
+		04BCAC1E1CC7EEC700D6AF6B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BCAC1A1CC7EEC700D6AF6B /* RealmSwift.framework */; };
+		04BCAC1F1CC7EEC700D6AF6B /* RealmSwiftBlogData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BCAC1B1CC7EEC700D6AF6B /* RealmSwiftBlogData.framework */; };
+		04BCAC221CC7F4F900D6AF6B /* RBQFetchedResultsController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BCAC201CC7F4F900D6AF6B /* RBQFetchedResultsController.framework */; };
+		04BCAC231CC7F4F900D6AF6B /* TOWebViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BCAC211CC7F4F900D6AF6B /* TOWebViewController.framework */; };
+		04BCAC2B1CC86A2000D6AF6B /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCAC2A1CC86A2000D6AF6B /* FoodTableViewCell.swift */; };
+		04BCAC2D1CC86B5B00D6AF6B /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCAC2C1CC86B5B00D6AF6B /* Food.swift */; };
+		04BCAC2F1CC86BF000D6AF6B /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCAC2E1CC86BF000D6AF6B /* FoodTableViewController.swift */; };
+		E48CB5D62241C8776ED57F34 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAA4FAD50ACECC54588B0C9 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,18 @@
 		046E8ED11CC30A100080070D /* LeanLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanLifeTests.swift; sourceTree = "<group>"; };
 		046E8ED31CC30A100080070D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048CC1C71CC71473007EF0F9 /* master_of_break.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = master_of_break.ttf; sourceTree = "<group>"; };
+		04BCAC181CC7EEC700D6AF6B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../Library/Developer/Xcode/DerivedData/LeanLife-dvjeifuwdtmemrbldhhhwgyehbqs/Build/Products/Debug-iphonesimulator/Realm.framework"; sourceTree = "<group>"; };
+		04BCAC191CC7EEC700D6AF6B /* RealmSearchViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSearchViewController.framework; path = "../../../Library/Developer/Xcode/DerivedData/LeanLife-dvjeifuwdtmemrbldhhhwgyehbqs/Build/Products/Debug-iphonesimulator/RealmSearchViewController.framework"; sourceTree = "<group>"; };
+		04BCAC1A1CC7EEC700D6AF6B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/LeanLife-dvjeifuwdtmemrbldhhhwgyehbqs/Build/Products/Debug-iphonesimulator/RealmSwift.framework"; sourceTree = "<group>"; };
+		04BCAC1B1CC7EEC700D6AF6B /* RealmSwiftBlogData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwiftBlogData.framework; path = "../../../Library/Developer/Xcode/DerivedData/LeanLife-dvjeifuwdtmemrbldhhhwgyehbqs/Build/Products/Debug-iphonesimulator/RealmSwiftBlogData.framework"; sourceTree = "<group>"; };
+		04BCAC201CC7F4F900D6AF6B /* RBQFetchedResultsController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RBQFetchedResultsController.framework; path = "../../../Library/Developer/Xcode/DerivedData/LeanLife-dvjeifuwdtmemrbldhhhwgyehbqs/Build/Products/Debug-iphonesimulator/RBQFetchedResultsController.framework"; sourceTree = "<group>"; };
+		04BCAC211CC7F4F900D6AF6B /* TOWebViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TOWebViewController.framework; path = "../../../Library/Developer/Xcode/DerivedData/LeanLife-dvjeifuwdtmemrbldhhhwgyehbqs/Build/Products/Debug-iphonesimulator/TOWebViewController.framework"; sourceTree = "<group>"; };
+		04BCAC2A1CC86A2000D6AF6B /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		04BCAC2C1CC86B5B00D6AF6B /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		04BCAC2E1CC86BF000D6AF6B /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
+		1B274DFF4EB76C7AF8F7F34D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1BAA4FAD50ACECC54588B0C9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		310AF9392EB377CF4491CFBB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +69,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BCAC221CC7F4F900D6AF6B /* RBQFetchedResultsController.framework in Frameworks */,
+				04BCAC231CC7F4F900D6AF6B /* TOWebViewController.framework in Frameworks */,
+				04BCAC1C1CC7EEC700D6AF6B /* Realm.framework in Frameworks */,
+				04BCAC1D1CC7EEC700D6AF6B /* RealmSearchViewController.framework in Frameworks */,
+				04BCAC1E1CC7EEC700D6AF6B /* RealmSwift.framework in Frameworks */,
+				04BCAC1F1CC7EEC700D6AF6B /* RealmSwiftBlogData.framework in Frameworks */,
+				E48CB5D62241C8776ED57F34 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +95,8 @@
 				046E8EB91CC30A0F0080070D /* LeanLife */,
 				046E8ED01CC30A100080070D /* LeanLifeTests */,
 				046E8EB81CC30A0F0080070D /* Products */,
+				2E5BF7C6E75080ECD70DF859 /* Pods */,
+				E27C47DCB0D54EF6DDFD7BC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,11 +115,14 @@
 				046E8EBA1CC30A0F0080070D /* AppDelegate.swift */,
 				046E8EBC1CC30A0F0080070D /* FirstViewController.swift */,
 				046E8EBE1CC30A0F0080070D /* SecondViewController.swift */,
+				04BCAC2A1CC86A2000D6AF6B /* FoodTableViewCell.swift */,
+				04BCAC2E1CC86BF000D6AF6B /* FoodTableViewController.swift */,
 				048CC1C71CC71473007EF0F9 /* master_of_break.ttf */,
 				046E8EC01CC30A100080070D /* Main.storyboard */,
 				046E8EC31CC30A100080070D /* Assets.xcassets */,
 				046E8EC51CC30A100080070D /* LaunchScreen.storyboard */,
 				046E8EC81CC30A100080070D /* Info.plist */,
+				04BCAC2C1CC86B5B00D6AF6B /* Food.swift */,
 			);
 			path = LeanLife;
 			sourceTree = "<group>";
@@ -102,6 +136,29 @@
 			path = LeanLifeTests;
 			sourceTree = "<group>";
 		};
+		2E5BF7C6E75080ECD70DF859 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B274DFF4EB76C7AF8F7F34D /* Pods.debug.xcconfig */,
+				310AF9392EB377CF4491CFBB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E27C47DCB0D54EF6DDFD7BC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04BCAC201CC7F4F900D6AF6B /* RBQFetchedResultsController.framework */,
+				04BCAC211CC7F4F900D6AF6B /* TOWebViewController.framework */,
+				04BCAC181CC7EEC700D6AF6B /* Realm.framework */,
+				04BCAC191CC7EEC700D6AF6B /* RealmSearchViewController.framework */,
+				04BCAC1A1CC7EEC700D6AF6B /* RealmSwift.framework */,
+				04BCAC1B1CC7EEC700D6AF6B /* RealmSwiftBlogData.framework */,
+				1BAA4FAD50ACECC54588B0C9 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046E8ED61CC30A100080070D /* Build configuration list for PBXNativeTarget "LeanLife" */;
 			buildPhases = (
+				9D5E6A2C5872E121F25CA0D2 /* Check Pods Manifest.lock */,
 				046E8EB31CC30A0F0080070D /* Sources */,
 				046E8EB41CC30A0F0080070D /* Frameworks */,
 				046E8EB51CC30A0F0080070D /* Resources */,
+				F2E11B04D0E91B127CF021EB /* Embed Pods Frameworks */,
+				B82B7788AF389B4E1CE117A4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,12 +260,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9D5E6A2C5872E121F25CA0D2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B82B7788AF389B4E1CE117A4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2E11B04D0E91B127CF021EB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		046E8EB31CC30A0F0080070D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				046E8EBF1CC30A0F0080070D /* SecondViewController.swift in Sources */,
+				04BCAC2F1CC86BF000D6AF6B /* FoodTableViewController.swift in Sources */,
+				04BCAC2B1CC86A2000D6AF6B /* FoodTableViewCell.swift in Sources */,
+				04BCAC2D1CC86B5B00D6AF6B /* Food.swift in Sources */,
 				046E8EBB1CC30A0F0080070D /* AppDelegate.swift in Sources */,
 				046E8EBD1CC30A0F0080070D /* FirstViewController.swift in Sources */,
 			);
@@ -334,6 +445,7 @@
 		};
 		046E8ED71CC30A100080070D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B274DFF4EB76C7AF8F7F34D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -349,6 +461,7 @@
 		};
 		046E8ED81CC30A100080070D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 310AF9392EB377CF4491CFBB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

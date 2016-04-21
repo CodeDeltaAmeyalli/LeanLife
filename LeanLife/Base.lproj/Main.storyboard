@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YfH-Ck-MEq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HqL-KW-qa1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1124,16 +1124,16 @@ Calories</string>
             </objects>
             <point key="canvasLocation" x="506" y="1783"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Food Search View Controller-->
         <scene sceneID="eZ8-NF-zGa">
             <objects>
-                <tableViewController id="YfH-Ck-MEq" sceneMemberID="viewController">
+                <tableViewController id="YfH-Ck-MEq" customClass="FoodSearchViewController" customModule="RealmSearchViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wHZ-99-DgA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="p7N-ob-BOm">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" id="p7N-ob-BOm" customClass="FoodTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p7N-ob-BOm" id="6b6-WS-7c7">
@@ -1153,6 +1153,9 @@ Calories</string>
                                         <constraint firstItem="W8I-4a-bNq" firstAttribute="leading" secondItem="6b6-WS-7c7" secondAttribute="leadingMargin" id="lTt-aI-DHQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="W8I-4a-bNq" id="DNV-QK-NBP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1161,6 +1164,11 @@ Calories</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="y2q-9I-lVa"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="entityName" value="FoodObject"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="searchPropertyKeyPath" value="title"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="useContainsSearch" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtr-iR-4og" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
