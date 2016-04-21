@@ -11,12 +11,12 @@ import UIKit
 class Measurements {
     
     //MARK: Properties
-    var height: Double
-    var weight: Double
-    var wristMeasure: Double
-    var physicalActivity: UIPickerViewDelegate
+    dynamic var height = 3.1416
+    dynamic var weight = 3.1416
+    dynamic var wristMeasure = 3.1416
+    dynamic var physicalActivity = "" 
     
-    //MARK: Initializer 
+   /* //MARK: Initializer
     init?(height: Double, weight: Double, wristMeasure: Double, physicalActivity: UIPickerViewDelegate ){
         self.height = height
         self.weight = weight
@@ -26,7 +26,7 @@ class Measurements {
         if height < 0 || weight < 0 || wristMeasure < 0 {
             return nil 
         }
-    }
+    } */
     
     
     

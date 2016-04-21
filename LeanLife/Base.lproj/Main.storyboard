@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6uJ-Ht-5fW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -19,6 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultProfileInfoPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-vg-P2u">
+                                <rect key="frame" x="214" y="134" width="172" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="175" id="1j1-lX-VDW"/>
+                                    <constraint firstAttribute="width" constant="200" id="a9n-7V-SOw"/>
+                                    <constraint firstAttribute="height" constant="204" id="fO5-Fa-qvB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="kuh-jB-PnU"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Wrg-Ib-Okk">
                                 <rect key="frame" x="20" y="353" width="560" height="154"/>
                                 <subviews>
@@ -117,22 +126,12 @@
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="dXf-zD-gEz">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="menuProfileSegue:" destination="9pv-A4-QxB" id="rwd-XL-VMN"/>
-                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="profileToMainMenuUnwind" id="gen-p2-IiF"/>
+                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="profileToMainMenuUnwind" id="tSu-mQ-773"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultProfileInfoPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-vg-P2u">
-                                <rect key="frame" x="214" y="134" width="172" height="175"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="175" id="1j1-lX-VDW"/>
-                                    <constraint firstAttribute="width" constant="200" id="a9n-7V-SOw"/>
-                                    <constraint firstAttribute="height" constant="204" id="fO5-Fa-qvB"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="kuh-jB-PnU"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -148,9 +147,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="imageProfilePhotoTabIcon" id="acW-dT-cKf"/>
-                    <connections>
-                        <outlet property="photoImageView" destination="dFd-vg-P2u" id="5Ri-ub-e0l"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,13 +263,13 @@ you should consume per day...</string>
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="i6e-5T-4r2">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="goalToMainMenuUnwind" id="qbt-Cn-SOb"/>
+                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="goalToMainMenuUnwind" id="N4P-pL-GgA"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ELW-nj-G4k">
                                             <color key="tintColor" red="0.97406525320222515" green="1" blue="0.97482578104381423" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="DbY-Y7-H3b" kind="showDetail" identifier="goalToAddSegue" id="sHX-L5-ICq"/>
+                                                <segue destination="6uJ-Ht-5fW" kind="showDetail" identifier="goalToAddSegue" id="sHX-L5-ICq"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -321,11 +317,11 @@ you should consume per day...</string>
                                     <color key="textColor" red="0.98678870225152804" green="1" blue="0.98867043438014934" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Lean Life" id="tjS-k6-NqS">
+                                    <navigationItem title="Menu" id="tjS-k6-NqS">
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Oub-9b-80S">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="DbY-Y7-H3b" kind="showDetail" identifier="menuToAddSegue" id="gpG-or-jOH"/>
+                                                <segue destination="6uJ-Ht-5fW" kind="showDetail" identifier="menuToAddSegue" id="gpG-or-jOH"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -418,7 +414,7 @@ you should consume per day...</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omi-Qa-kFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1839" y="699"/>
+            <point key="canvasLocation" x="-1598" y="665"/>
         </scene>
         <!--Shapes View Controller-->
         <scene sceneID="JGu-dA-mvq">
@@ -444,7 +440,7 @@ you should consume per day...</string>
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="p2D-Ik-FdZ">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="shapeToMainMenuUnwind" id="Xce-aa-aD9"/>
+                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="shapeToMainMenuUnwind" id="s8i-pO-yYx"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -672,7 +668,7 @@ you should consume per day...</string>
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="SFH-uU-cxn">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="measurementsToMainMenuUnwind" id="R20-X4-ZYh"/>
+                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="measurementsToMainMenuUnwind" id="SeP-0r-Kyd"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -899,13 +895,13 @@ Calories</string>
                                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="Fvt-vI-cFc">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="dailyProgressToMainMenuUnwind" id="78r-Vj-8Js"/>
+                                                <segue destination="aLh-Gs-BC2" kind="show" identifier="dailyProgressToMainMenuUnwind" id="8ah-3G-wcu"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PNj-tG-YJr">
                                             <color key="tintColor" red="0.97644777245579595" green="0.96581476582084769" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="DbY-Y7-H3b" kind="showDetail" identifier="dailyProgressToAddSegue" id="0wD-2Q-AuV"/>
+                                                <segue destination="6uJ-Ht-5fW" kind="showDetail" identifier="dailyProgressToAddSegue" id="0wD-2Q-AuV"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1128,7 +1124,7 @@ Calories</string>
                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="Awj-Uc-OeR">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="aLh-Gs-BC2" kind="show" identifier="historyTableViewToMainMenuUnwind" id="tUB-cB-FsG"/>
+                                <segue destination="aLh-Gs-BC2" kind="show" identifier="historyToMainMenuUnwind" id="fXM-dI-H1L"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1292,7 +1288,7 @@ Calories</string>
                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="1hC-bZ-S2M">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="aLh-Gs-BC2" kind="show" identifier="dailyReviewToMainMenuUnwind" id="x2M-3c-NRg"/>
+                                <segue destination="aLh-Gs-BC2" kind="show" identifier="dailyReviewToMainMenuUnwind" id="bHl-Rn-1Zx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1360,13 +1356,14 @@ Calories</string>
                         <barButtonItem key="leftBarButtonItem" image="menuBars" id="czt-l3-e8J">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="aLh-Gs-BC2" kind="show" identifier="mealsToMainMenuUnwind" id="l0X-96-X9i"/>
+                                <action selector="cancelButton:" destination="YfH-Ck-MEq" id="8uk-uI-wnE"/>
+                                <segue destination="aLh-Gs-BC2" kind="show" identifier="mealsSearchToMainMenuUnwind" id="Emf-7J-9Uq"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xf-Tm-9mF">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="DbY-Y7-H3b" kind="showDetail" identifier="foodsToAddSegue" id="rba-vC-f6X"/>
+                                <segue destination="6uJ-Ht-5fW" kind="showDetail" identifier="foodsToAddSegue" id="rba-vC-f6X"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1387,24 +1384,6 @@ Calories</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-XK-fJh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <color key="textColor" red="0.97644777245579595" green="0.96581476582084769" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="New Meal" id="beh-vY-duR">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9Uy-mr-bwE">
-                                            <color key="tintColor" red="0.97644777245579595" green="0.96581476582084769" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="wEQ-ue-Qwd">
-                                            <color key="tintColor" red="0.97644777245579595" green="0.96581476582084769" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="101" placeholderIntrinsicHeight="97" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="yfS-XV-m55">
                                 <rect key="frame" x="250" y="68" width="101" height="97"/>
                             </imageView>
@@ -1442,9 +1421,9 @@ Calories</string>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JPv-Wy-O5O">
                                                         <rect key="frame" x="280" y="0.0" width="280" height="31"/>
                                                         <segments>
-                                                            <segment title="First"/>
-                                                            <segment title="Second"/>
-                                                            <segment title=""/>
+                                                            <segment title="g"/>
+                                                            <segment title="cups"/>
+                                                            <segment title="tbsp"/>
                                                         </segments>
                                                         <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                     </segmentedControl>
@@ -1574,6 +1553,9 @@ Calories</string>
                                     </imageView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wtM-Jx-mGX">
                                         <rect key="frame" x="69" y="0.0" width="422" height="81"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="DbY-Y7-H3b" eventType="valueChanged" id="gN2-8D-bmH"/>
+                                        </connections>
                                     </slider>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="65" placeholderIntrinsicHeight="80" image="fullStomach" translatesAutoresizingMaskIntoConstraints="NO" id="Hl4-7y-6Yz">
                                         <rect key="frame" x="495" y="0.0" width="65" height="80"/>
@@ -1596,13 +1578,11 @@ Calories</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yfS-XV-m55" firstAttribute="centerX" secondItem="R2i-dm-gLN" secondAttribute="centerX" id="3Vh-ys-xLV"/>
-                            <constraint firstItem="ZcF-XK-fJh" firstAttribute="leading" secondItem="R2i-dm-gLN" secondAttribute="leadingMargin" constant="-20" id="71D-Cz-wDv"/>
                             <constraint firstItem="PFp-QB-FuL" firstAttribute="centerX" secondItem="R2i-dm-gLN" secondAttribute="centerX" id="9Wm-RU-cqq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JJu-W5-taK" secondAttribute="trailing" id="Bqs-nS-e0Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PFp-QB-FuL" secondAttribute="trailing" id="EqD-Wb-Gxe"/>
                             <constraint firstItem="6UU-nW-xXg" firstAttribute="leading" secondItem="R2i-dm-gLN" secondAttribute="leadingMargin" id="Lu2-jf-ER0"/>
                             <constraint firstItem="PFp-QB-FuL" firstAttribute="top" secondItem="JJu-W5-taK" secondAttribute="bottom" constant="36" id="NrE-FW-oFZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZcF-XK-fJh" secondAttribute="trailing" constant="-20" id="cD4-LS-ccJ"/>
                             <constraint firstItem="6UU-nW-xXg" firstAttribute="top" secondItem="JJu-W5-taK" secondAttribute="bottom" constant="8" id="jzG-A0-6aX"/>
                             <constraint firstItem="JJu-W5-taK" firstAttribute="leading" secondItem="R2i-dm-gLN" secondAttribute="leadingMargin" id="kSz-YY-m81"/>
                             <constraint firstItem="JJu-W5-taK" firstAttribute="top" secondItem="yfS-XV-m55" secondAttribute="bottom" constant="15" id="oyJ-bD-3Fd"/>
@@ -1610,14 +1590,19 @@ Calories</string>
                             <constraint firstItem="PFp-QB-FuL" firstAttribute="leading" secondItem="R2i-dm-gLN" secondAttribute="leadingMargin" id="v1c-cM-ABX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zi1-XS-2aR"/>
                     <connections>
-                        <outlet property="mealNameTextField" destination="fol-mM-bQI" id="NJK-lN-84P"/>
-                        <outlet property="saveButton" destination="wEQ-ue-Qwd" id="OJN-0d-5l2"/>
+                        <outlet property="caloriesTextField" destination="YKs-AP-GCM" id="QpV-mY-Ny3"/>
+                        <outlet property="carbsTextField" destination="fCv-gr-QAe" id="5NF-85-Xdw"/>
+                        <outlet property="fatTextField" destination="qwU-hT-zRt" id="8U9-CU-dV3"/>
+                        <outlet property="imageImageView" destination="yfS-XV-m55" id="2Ph-qQ-MB9"/>
+                        <outlet property="proteinsTextField" destination="chi-BI-4uv" id="ksM-tf-15I"/>
+                        <outlet property="quantitySegmentedControl" destination="JPv-Wy-O5O" id="ZFp-nT-kgn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6k-cZ-CyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594" y="2605"/>
+            <point key="canvasLocation" x="219" y="2605"/>
         </scene>
         <!--History -->
         <scene sceneID="lba-cS-1PK">
@@ -1636,7 +1621,7 @@ Calories</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbB-QB-2cJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="1871"/>
+            <point key="canvasLocation" x="1488" y="1879"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7al-2g-eqT">
@@ -1655,6 +1640,24 @@ Calories</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GyK-hp-gxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1614" y="1751"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0QB-Sy-yJj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6uJ-Ht-5fW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6IX-Nb-Vke">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DbY-Y7-H3b" kind="relationship" relationship="rootViewController" id="oIS-jw-ZBf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pnl-li-LG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593" y="2605"/>
         </scene>
     </scenes>
     <resources>
@@ -1683,7 +1686,7 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l0X-96-X9i"/>
-        <segue reference="rba-vC-f6X"/>
+        <segue reference="Emf-7J-9Uq"/>
+        <segue reference="sHX-L5-ICq"/>
     </inferredMetricsTieBreakers>
 </document>

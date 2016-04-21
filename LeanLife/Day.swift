@@ -14,16 +14,16 @@ class Day {
     var date: NSDate
     var dailyCal: Int
     var consumedCal: Int
-    var proteins: Int
-    var carbohydrates: Int
-    var fat: Int
+    var proteins: Double
+    var carbohydrates: Double
+    var fat: Double
     var water: Int
     var goal: String
     var usersPhoto: UIImage?
     var usersName: String
     
     //MARK: Initialization 
-    init?(date: NSDate, dailyCal: Int, consumedCal: Int, proteins: Int, carbohydrates: Int, fat: Int, water: Int, goal: String, usersPhoto:UIImage, usersName: String){
+    init?(date: NSDate, dailyCal: Int, consumedCal: Int, proteins: Double, carbohydrates: Double, fat: Double, water: Int, goal: String, usersPhoto:UIImage, usersName: String){
         //Initialize stored Properties 
         self.date = date
         self.dailyCal = dailyCal

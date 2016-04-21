@@ -11,13 +11,13 @@ import UIKit
 class Profile {
     
     //MARK: Properties 
-    var photo: UIImage?
-    var name: String
-    var age: Int
-    var allergies: String
-    var gender: UISegmentedControlSegment
+    dynamic var photo = ""
+    dynamic var name = ""
+    dynamic var age = 0
+    dynamic var allergies = ""
+    dynamic var gender = ""
     
-    //MARK: Initialization
+   /* //MARK: Initialization
     init?(photo: UIImage, name: String, age: Int, allergies: String, gender:UISegmentedControlSegment){
         self.photo = photo
         self.name = name
@@ -28,6 +28,6 @@ class Profile {
         if age < 0  {
             return nil
         }
-    }
+    } */
     
 }

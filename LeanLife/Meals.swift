@@ -10,17 +10,18 @@ import UIKit
 
 class Meal {
     // MARK: Properties 
-    var photo: UIImage?
-    var name: String
-    var date: NSDate
-    var quantity: Double
-    var proteins: Int
-    var carbohydrates: Int
-    var fat: Int
-    var calories: Int
+    dynamic var photo = ""
+    dynamic var name = ""
+    dynamic var date = ""
+    dynamic var quantity = ""
+    dynamic var proteins = ""
+    dynamic var carbohydrates = ""
+    dynamic var fat = ""
+    dynamic var calories = ""
+    dynamic var satiety = 0
     
-    //MARK: Initialization 
-    init?(photo: UIImage, name: String, date:NSDate, quantity: Double, proteins: Int, carbohydrates: Int, fat: Int, calories: Int){
+    /*//MARK: Initialization
+    init?(photo: UIImage, name: String, date:NSDate, quantity: Double, proteins: Double, carbohydrates: Double, fat: Double, calories: Int){
       //Initialize stored properties 
         self.photo = photo
         self.name = name
@@ -34,7 +35,7 @@ class Meal {
         if name.isEmpty || quantity < 0 || proteins < 0 || carbohydrates < 0 || fat < 0 || calories < 0 {
             return nil 
         }
-    }
+    }*/
    
     
     
