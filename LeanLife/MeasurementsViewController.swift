@@ -9,8 +9,16 @@
 import UIKit
 
 class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    //MARK: Properties 
+    
+    @IBOutlet weak var weightTextField: UITextField!
 
+    @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var pickerActivity: UIPickerView!
+    @IBOutlet weak var diameterTextField: UITextField!
+    
+    @IBOutlet weak var activityPickerView: UIPickerView!
     var pickerActivityData: [String] = [String]()
     
     override func viewDidLoad() {
