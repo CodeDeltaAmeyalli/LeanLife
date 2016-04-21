@@ -9,6 +9,10 @@
 import UIKit
 
 class DailyProgressViewController: UIViewController {
+    
+    //MARK: Actions 
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
