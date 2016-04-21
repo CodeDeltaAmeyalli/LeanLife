@@ -10,10 +10,11 @@ import UIKit
 
 class DailyProgressViewController: UIViewController {
     
-    //MARK: Actions 
+    @IBOutlet weak var profilePhotoImageView: UIImageView!
+    
+   
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
