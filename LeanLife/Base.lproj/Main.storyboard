@@ -19,14 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultProfileInfoPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-vg-P2u">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultProfileInfoPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-vg-P2u">
                                 <rect key="frame" x="214" y="134" width="172" height="175"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="175" id="1j1-lX-VDW"/>
                                     <constraint firstAttribute="width" constant="200" id="a9n-7V-SOw"/>
                                     <constraint firstAttribute="height" constant="204" id="fO5-Fa-qvB"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="kuh-jB-PnU"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ugh-Tc-eme" appends="YES" id="fmk-Zo-xUu"/>
+                                </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Wrg-Ib-Okk">
                                 <rect key="frame" x="20" y="353" width="560" height="154"/>
@@ -69,17 +73,17 @@
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="313" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8G0-gg-ioH">
                                                         <rect key="frame" x="0.0" y="0.0" width="456" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="313" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Age " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kRx-S6-vxM">
                                                         <rect key="frame" x="0.0" y="42" width="456" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="313" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Allergies" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fr3-n7-7hR">
                                                         <rect key="frame" x="0.0" y="84" width="456" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4C2-eW-Xu2">
                                                         <rect key="frame" x="0.0" y="126" width="456" height="29"/>
@@ -151,8 +155,19 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="imageProfilePhotoTabIcon" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="kRx-S6-vxM" id="KXe-a5-1py"/>
+                        <outlet property="allergieTextField" destination="fr3-n7-7hR" id="0fU-Eh-n14"/>
+                        <outlet property="nameTextField" destination="8G0-gg-ioH" id="nTk-Xb-YXz"/>
+                        <outlet property="profilePhotoImageView" destination="dFd-vg-P2u" id="n8X-lS-LpV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ugh-Tc-eme">
+                    <connections>
+                        <action selector="selectProfilePhotoGestureRecognizer:" destination="9pv-A4-QxB" id="etm-jf-yom"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="722" y="-968"/>
         </scene>
@@ -205,7 +220,7 @@ you should consume per day...</string>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JCX-k1-4QC">
                                 <rect key="frame" x="245" y="260" width="111" height="256"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="400" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-fZ-4df">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="76g" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-fZ-4df">
                                         <rect key="frame" x="0.0" y="0.0" width="111" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -217,7 +232,7 @@ you should consume per day...</string>
                                         <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="800" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snd-st-abj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snd-st-abj">
                                         <rect key="frame" x="0.0" y="66" width="111" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -229,7 +244,7 @@ you should consume per day...</string>
                                         <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="900" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOd-hp-jn5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="227g" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOd-hp-jn5">
                                         <rect key="frame" x="0.0" y="132" width="111" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -241,7 +256,7 @@ you should consume per day...</string>
                                         <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1a-y7-gon">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1512" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1a-y7-gon">
                                         <rect key="frame" x="0.0" y="198" width="111" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -465,15 +480,23 @@ you should consume per day...</string>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape1" translatesAutoresizingMaskIntoConstraints="NO" id="jP8-Qv-ocP">
                                                 <rect key="frame" x="0.0" y="0.0" width="56" height="192"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jP8-Qv-ocP" secondAttribute="height" multiplier="7:24" id="THf-Z7-C1v"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="NOV-PO-1e1" appends="YES" id="flk-kw-7L6"/>
+                                                </connections>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape2" translatesAutoresizingMaskIntoConstraints="NO" id="SI8-y5-gQe">
                                                 <rect key="frame" x="68" y="0.0" width="56" height="192"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="SI8-y5-gQe" secondAttribute="height" multiplier="7:24" id="jni-v1-ubY"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="XY4-ux-Zii" appends="YES" id="iHC-ts-y8w"/>
+                                                </connections>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape3" translatesAutoresizingMaskIntoConstraints="NO" id="49A-cB-0SD">
                                                 <rect key="frame" x="136" y="0.0" width="62" height="192"/>
@@ -554,6 +577,8 @@ you should consume per day...</string>
                     <tabBarItem key="tabBarItem" title="Shape" image="bodyShapeTabIcon" id="yuf-7j-Rzw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8M-Fl-tMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NOV-PO-1e1"/>
+                <tapGestureRecognizer id="XY4-ux-Zii"/>
             </objects>
             <point key="canvasLocation" x="722" y="322"/>
         </scene>
@@ -622,7 +647,7 @@ you should consume per day...</string>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="313" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Weight " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chV-gG-j2S">
                                                 <rect key="frame" x="0.0" y="0.0" width="396" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="313" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Height " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Nc-bt-WY3">
                                                 <rect key="frame" x="0.0" y="39" width="396" height="30"/>
@@ -716,7 +741,10 @@ you should consume per day...</string>
                     <tabBarItem key="tabBarItem" title="Measurements" image="ruleTabIconMeasurements" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="activityPickerView" destination="csY-qR-GeS" id="Lvg-9o-cZc"/>
+                        <outlet property="diameterTextField" destination="KAe-hx-2Ko" id="qVo-5o-BSP"/>
+                        <outlet property="heightTextField" destination="6Nc-bt-WY3" id="Ntt-Z3-LN6"/>
                         <outlet property="pickerActivity" destination="csY-qR-GeS" id="ei6-EB-jvU"/>
+                        <outlet property="weightTextField" destination="chV-gG-j2S" id="sLf-74-VcE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -769,7 +797,7 @@ you should consume per day...</string>
                                 </variation>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rCX-Gw-d87">
-                                <rect key="frame" x="20" y="246" width="560" height="125"/>
+                                <rect key="frame" x="20" y="246" width="560" height="133"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition intake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xk-uW-mXg">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="23"/>
@@ -778,35 +806,35 @@ you should consume per day...</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="g9E-A5-HBK">
-                                        <rect key="frame" x="0.0" y="35" width="560" height="90"/>
+                                        <rect key="frame" x="0.0" y="35" width="560" height="98"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nLh-uy-07V">
-                                                <rect key="frame" x="0.0" y="0.0" width="274" height="90"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="98"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proteins " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhi-sD-iaI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Proteins " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhi-sD-iaI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VnS-ks-RQk">
-                                                        <rect key="frame" x="0.0" y="33" width="274" height="6"/>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VnS-ks-RQk">
+                                                        <rect key="frame" x="0.0" y="41" width="274" height="6"/>
                                                         <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                     </progressView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLk-mL-EXE">
-                                                        <rect key="frame" x="0.0" y="51" width="274" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLk-mL-EXE">
+                                                        <rect key="frame" x="0.0" y="59" width="274" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xzU-1L-Xe9">
-                                                        <rect key="frame" x="0.0" y="84" width="274" height="6"/>
+                                                        <rect key="frame" x="0.0" y="92" width="274" height="6"/>
                                                         <color key="tintColor" red="0.96078431372549022" green="0.73725490196078436" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Qcs-Ag-0uq">
-                                                <rect key="frame" x="286" y="0.0" width="274" height="90"/>
+                                                <rect key="frame" x="286" y="0.0" width="274" height="98"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbohydrates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gg3-1T-jgR">
                                                         <rect key="frame" x="0.0" y="0.0" width="274" height="21"/>
@@ -818,14 +846,26 @@ you should consume per day...</string>
                                                         <rect key="frame" x="0.0" y="33" width="274" height="6"/>
                                                         <color key="tintColor" red="0.81568627450980391" green="0.0039215686274509803" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                                     </progressView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-Pp-UWx">
-                                                        <rect key="frame" x="0.0" y="51" width="274" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ecn-38-VA8">
+                                                        <rect key="frame" x="0.0" y="51" width="274" height="29"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-Pp-UWx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="29"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-je-cL8">
+                                                                <rect key="frame" x="180" y="0.0" width="94" height="29"/>
+                                                                <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <connections>
+                                                                    <action selector="stepperValueChanged:" destination="MsX-b3-XGH" eventType="valueChanged" id="0Y4-0d-qhw"/>
+                                                                </connections>
+                                                            </stepper>
+                                                        </subviews>
+                                                    </stackView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="126" placeholderIntrinsicHeight="6" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cda-wn-r4z">
-                                                        <rect key="frame" x="0.0" y="84" width="274" height="6"/>
+                                                        <rect key="frame" x="0.0" y="92" width="274" height="6"/>
                                                         <color key="tintColor" red="0.26666666666666666" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                                     </progressView>
                                                 </subviews>
@@ -835,7 +875,7 @@ you should consume per day...</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Energy intake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abz-l0-eEy">
-                                <rect key="frame" x="20" y="366" width="126" height="21"/>
+                                <rect key="frame" x="20" y="387" width="126" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -853,13 +893,13 @@ you should consume per day...</string>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Z1S-7G-u6r">
                                         <rect key="frame" x="112" y="0.0" width="448" height="102"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello, username " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-7K-Son">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, username " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-7K-Son">
                                                 <rect key="frame" x="0.0" y="0.0" width="448" height="51"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your Goal is: Default Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlA-Ds-kqs">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Goal is: Default Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlA-Ds-kqs">
                                                 <rect key="frame" x="0.0" y="51" width="448" height="51"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.29411764709999999" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -878,7 +918,7 @@ you should consume per day...</string>
                                 </variation>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Daily calories: 1768 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb7-c0-hma">
-                                <rect key="frame" x="20" y="395" width="153" height="21"/>
+                                <rect key="frame" x="20" y="434" width="153" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -926,7 +966,7 @@ Calories</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="10" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="93A-0C-A1F">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="10" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="93A-0C-A1F">
                                 <rect key="frame" x="20" y="416" width="560" height="10"/>
                             </progressView>
                         </subviews>
@@ -936,10 +976,7 @@ Calories</string>
                             <constraint firstAttribute="trailingMargin" secondItem="LjT-Tk-3Lb" secondAttribute="trailing" constant="-20" id="1vZ-k7-UuL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rCX-Gw-d87" secondAttribute="trailing" id="4Wz-RB-yzt"/>
                             <constraint firstItem="LjT-Tk-3Lb" firstAttribute="top" secondItem="Uzs-Ra-Llr" secondAttribute="topMargin" id="6Qe-Yz-VAi"/>
-                            <constraint firstItem="93A-0C-A1F" firstAttribute="top" secondItem="Cb7-c0-hma" secondAttribute="bottom" constant="8" symbolic="YES" id="6kq-JM-i1M"/>
-                            <constraint firstItem="P4J-OF-QSh" firstAttribute="top" secondItem="93A-0C-A1F" secondAttribute="bottom" id="AcO-EY-npa"/>
                             <constraint firstItem="rCX-Gw-d87" firstAttribute="top" secondItem="CEX-py-ptL" secondAttribute="bottom" constant="30" id="DGD-bv-LEV"/>
-                            <constraint firstItem="93A-0C-A1F" firstAttribute="trailing" secondItem="Uzs-Ra-Llr" secondAttribute="trailingMargin" id="InZ-xZ-rz7"/>
                             <constraint firstItem="abz-l0-eEy" firstAttribute="top" secondItem="rCX-Gw-d87" secondAttribute="bottom" constant="37" id="PTM-jx-RVU"/>
                             <constraint firstItem="LjT-Tk-3Lb" firstAttribute="top" secondItem="Uzs-Ra-Llr" secondAttribute="topMargin" id="Rvd-aZ-lCP"/>
                             <constraint firstItem="CEX-py-ptL" firstAttribute="top" secondItem="aif-bD-0zd" secondAttribute="bottom" constant="50" id="SqS-Rp-eXU"/>
@@ -947,21 +984,18 @@ Calories</string>
                             <constraint firstItem="LjT-Tk-3Lb" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="ZQL-ko-71b"/>
                             <constraint firstItem="CEX-py-ptL" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="aAT-xA-qz7"/>
                             <constraint firstItem="Cb7-c0-hma" firstAttribute="top" secondItem="abz-l0-eEy" secondAttribute="bottom" constant="8" id="azR-Pj-qdO"/>
-                            <constraint firstItem="93A-0C-A1F" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="beD-Q1-Nws"/>
+                            <constraint firstItem="P4J-OF-QSh" firstAttribute="top" secondItem="Cb7-c0-hma" secondAttribute="bottom" constant="13" id="bcm-Vo-tZd"/>
                             <constraint firstItem="CEX-py-ptL" firstAttribute="top" secondItem="aif-bD-0zd" secondAttribute="bottom" constant="35" id="dcU-Yh-cyY"/>
                             <constraint firstItem="abz-l0-eEy" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="ey2-8M-kyK"/>
-                            <constraint firstItem="93A-0C-A1F" firstAttribute="top" secondItem="Cb7-c0-hma" secondAttribute="bottom" constant="10" id="hbA-py-7eA"/>
                             <constraint firstItem="LjT-Tk-3Lb" firstAttribute="centerY" secondItem="Uzs-Ra-Llr" secondAttribute="centerY" id="iaP-ZD-Gjg"/>
                             <constraint firstItem="Cb7-c0-hma" firstAttribute="top" secondItem="abz-l0-eEy" secondAttribute="bottom" constant="8" id="jaB-EH-Pxt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CEX-py-ptL" secondAttribute="trailing" id="lFl-o1-hPr"/>
                             <constraint firstItem="P4J-OF-QSh" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="lHG-4u-rOj"/>
-                            <constraint firstItem="P4J-OF-QSh" firstAttribute="top" secondItem="93A-0C-A1F" secondAttribute="bottom" constant="22" id="p0S-dI-8Iz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P4J-OF-QSh" secondAttribute="trailing" id="pAe-iF-ihg"/>
                             <constraint firstItem="abz-l0-eEy" firstAttribute="top" secondItem="rCX-Gw-d87" secondAttribute="bottom" constant="37" id="pyI-LJ-wVV"/>
                             <constraint firstItem="LjT-Tk-3Lb" firstAttribute="centerX" secondItem="Uzs-Ra-Llr" secondAttribute="centerX" id="qqb-pc-YOP"/>
                             <constraint firstItem="rCX-Gw-d87" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="r2O-IO-TYg"/>
                             <constraint firstItem="LjT-Tk-3Lb" firstAttribute="top" secondItem="Uzs-Ra-Llr" secondAttribute="topMargin" id="tA3-6o-9oe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="93A-0C-A1F" secondAttribute="trailing" constant="410" id="tqh-NE-reW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LjT-Tk-3Lb" secondAttribute="trailing" id="x6H-Iq-Nw4"/>
                             <constraint firstItem="Cb7-c0-hma" firstAttribute="leading" secondItem="Uzs-Ra-Llr" secondAttribute="leadingMargin" id="xX5-H2-EmJ"/>
                         </constraints>
@@ -976,12 +1010,14 @@ Calories</string>
                                 <exclude reference="dcU-Yh-cyY"/>
                                 <exclude reference="pyI-LJ-wVV"/>
                                 <exclude reference="azR-Pj-qdO"/>
-                                <exclude reference="6kq-JM-i1M"/>
-                                <exclude reference="p0S-dI-8Iz"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Daily Progress " image="dailyProgressTabIcon" id="KAt-f2-EIS"/>
+                    <connections>
+                        <outlet property="stepper" destination="cgV-je-cL8" id="v4k-bD-5F3"/>
+                        <outlet property="waterProgressBar" destination="Cda-wn-r4z" id="q5l-jd-uEy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFa-dy-3FT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1625,8 +1661,10 @@ Calories</string>
                         <outlet property="carbsTextField" destination="fCv-gr-QAe" id="5NF-85-Xdw"/>
                         <outlet property="fatTextField" destination="qwU-hT-zRt" id="8U9-CU-dV3"/>
                         <outlet property="imageImageView" destination="yfS-XV-m55" id="2Ph-qQ-MB9"/>
+                        <outlet property="mealNameTextField" destination="fol-mM-bQI" id="Mea-jB-XOh"/>
                         <outlet property="proteinsTextField" destination="chi-BI-4uv" id="ksM-tf-15I"/>
                         <outlet property="quantitySegmentedControl" destination="JPv-Wy-O5O" id="ZFp-nT-kgn"/>
+                        <outlet property="quantityTextField" destination="0Oh-pm-FCV" id="uqA-lF-HMw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6k-cZ-CyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1718,9 +1756,9 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tSu-mQ-773"/>
+        <segue reference="s8i-pO-yYx"/>
+        <segue reference="sHX-L5-ICq"/>
         <segue reference="oIS-jw-ZBf"/>
-        <segue reference="0wD-2Q-AuV"/>
         <segue reference="hlS-bT-VfZ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,12 +10,19 @@ import UIKit
 
 class DailyProgressViewController: UIViewController {
     
+    
     //MARK: Actions 
     
     
+   
+    @IBOutlet weak var waterProgressBar: UIProgressView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        stepper.wraps = true
+        stepper.autorepeat = true
+        stepper.maximumValue = 8
 
         // Do any additional setup after loading the view.
     }
@@ -35,5 +42,12 @@ class DailyProgressViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBOutlet weak var valueLabel: UILabel!
 
+    @IBOutlet weak var stepper: UIStepper!
+    @IBAction func stepperValueChanged(sender: UIStepper) {
+        let step =  Float(sender.value) / 8
+        waterProgressBar.setProgress(step, animated: true)
+    }
 }
+

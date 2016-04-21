@@ -27,6 +27,9 @@ class GoalViewController: UIViewController {
         
     }
     
+   /* let proteinIntake = calorieIntake(currentValue)
+        )
+ */
 
     override func viewDidLoad() {
         super.viewDidLoad()

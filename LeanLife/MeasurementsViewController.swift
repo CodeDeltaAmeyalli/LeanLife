@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     //MARK: Properties 
     
@@ -27,6 +27,9 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         //Connect data:
         
+        weightTextField.delegate = self
+        heightTextField.delegate = self
+        diameterTextField.delegate = self
         self.pickerActivity.delegate = self
         self.pickerActivity.dataSource = self
         
@@ -62,6 +65,26 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
     }
+    // MARK: UITextField
+    /* found in: http://stackoverflow.com/questions/1347779/how-to-navigate-through-textfields-next-done-buttons */
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        let nextTage=textField.tag+1;
+        // Try to find next responder
+        let nextResponder=textField.superview?.viewWithTag(nextTage) as UIResponder!
+        
+        if (nextResponder != nil){
+            // Found next responder, so set it.
+            nextResponder?.becomeFirstResponder()
+        }
+        else
+        {
+            // Not found, so remove keyboard
+            textField.resignFirstResponder()
+        }
+        return false // We do not want UITextField to insert line-breaks.
+    }
+    
 
 
 }

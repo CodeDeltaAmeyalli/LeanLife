@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties 
     
@@ -29,6 +29,12 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        mealNameTextField.delegate = self
+        quantityTextField.delegate = self
+        carbsTextField.delegate = self
+        proteinsTextField.delegate = self
+        fatTextField.delegate = self
+        caloriesTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +75,25 @@ class AddViewController: UIViewController {
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    }
+    // MARK: UITextField
+    /* found in: http://stackoverflow.com/questions/1347779/how-to-navigate-through-textfields-next-done-buttons */
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        let nextTage=textField.tag+1;
+        // Try to find next responder
+        let nextResponder=textField.superview?.viewWithTag(nextTage) as UIResponder!
+        
+        if (nextResponder != nil){
+            // Found next responder, so set it.
+            nextResponder?.becomeFirstResponder()
+        }
+        else
+        {
+            // Not found, so remove keyboard
+            textField.resignFirstResponder()
+        }
+        return false // We do not want UITextField to insert line-breaks.
     }
   
 

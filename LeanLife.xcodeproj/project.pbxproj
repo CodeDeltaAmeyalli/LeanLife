@@ -197,7 +197,7 @@
 				TargetAttributes = {
 					046E8EB61CC30A0F0080070D = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = ZH3M357P5R;
+						DevelopmentTeam = 94AFWK7GBD;
 					};
 					046E8ECC1CC30A100080070D = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -400,7 +400,7 @@
 				INFOPLIST_FILE = LeanLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -415,7 +415,7 @@
 				INFOPLIST_FILE = LeanLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codedelta.LeanLife10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
