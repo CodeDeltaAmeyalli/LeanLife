@@ -38,7 +38,7 @@ class AddViewController: UIViewController {
     
     //MARK: Actions 
   
-    /* @IBAction func sliderValueChanged(sender: UISlider) {
+        /* @IBAction func sliderValueChanged(sender: UISlider) {
         let currentValue = Int(sender.value)
         myMeal.satiety = currentValue
  
@@ -46,6 +46,10 @@ class AddViewController: UIViewController {
     } */ 
     
     // MARK:  Navigation
+    @IBAction func cancelButton(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

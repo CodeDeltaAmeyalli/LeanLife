@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6uJ-Ht-5fW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1363,14 +1363,14 @@ Calories</string>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xf-Tm-9mF">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="6uJ-Ht-5fW" kind="showDetail" identifier="foodsToAddSegue" id="rba-vC-f6X"/>
+                                <segue destination="DbY-Y7-H3b" kind="show" id="Puy-gC-ZyZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtr-iR-4og" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1598" y="2605"/>
+            <point key="canvasLocation" x="-1342" y="2605"/>
         </scene>
         <!--Add New Meal View Controller -->
         <scene sceneID="ZzZ-A8-lmL">
@@ -1590,7 +1590,17 @@ Calories</string>
                             <constraint firstItem="PFp-QB-FuL" firstAttribute="leading" secondItem="R2i-dm-gLN" secondAttribute="leadingMargin" id="v1c-cM-ABX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zi1-XS-2aR"/>
+                    <navigationItem key="navigationItem" title="New Meal" id="zi1-XS-2aR">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0aB-Nm-Zxq">
+                            <color key="tintColor" red="0.97441360474271244" green="0.99943841597776917" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelButton:" destination="DbY-Y7-H3b" id="7by-4I-nfx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="1s7-ce-2Np">
+                            <color key="tintColor" red="0.97441360474271244" green="0.99943841597776917" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="caloriesTextField" destination="YKs-AP-GCM" id="QpV-mY-Ny3"/>
                         <outlet property="carbsTextField" destination="fCv-gr-QAe" id="5NF-85-Xdw"/>
@@ -1649,6 +1659,10 @@ Calories</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6IX-Nb-Vke">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.97441360474271244" green="0.99943841597776917" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1688,5 +1702,6 @@ Calories</string>
     <inferredMetricsTieBreakers>
         <segue reference="Emf-7J-9Uq"/>
         <segue reference="sHX-L5-ICq"/>
+        <segue reference="Puy-gC-ZyZ"/>
     </inferredMetricsTieBreakers>
 </document>
