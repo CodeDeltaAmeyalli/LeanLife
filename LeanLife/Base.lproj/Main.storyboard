@@ -1552,9 +1552,6 @@ Calories</string>
                                     </imageView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wtM-Jx-mGX">
                                         <rect key="frame" x="69" y="0.0" width="422" height="81"/>
-                                        <connections>
-                                            <action selector="sliderValueChanged:" destination="DbY-Y7-H3b" eventType="valueChanged" id="gN2-8D-bmH"/>
-                                        </connections>
                                     </slider>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="65" placeholderIntrinsicHeight="80" image="fullStomach" translatesAutoresizingMaskIntoConstraints="NO" id="Hl4-7y-6Yz">
                                         <rect key="frame" x="495" y="0.0" width="65" height="80"/>
@@ -1598,6 +1595,9 @@ Calories</string>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="1s7-ce-2Np">
                             <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="MsX-b3-XGH" kind="show" id="hlS-bT-VfZ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1611,7 +1611,7 @@ Calories</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6k-cZ-CyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="219" y="2605"/>
+            <point key="canvasLocation" x="131" y="2605"/>
         </scene>
         <!--History -->
         <scene sceneID="lba-cS-1PK">
@@ -1701,5 +1701,6 @@ Calories</string>
         <segue reference="SeP-0r-Kyd"/>
         <segue reference="sHX-L5-ICq"/>
         <segue reference="oIS-jw-ZBf"/>
+        <segue reference="hlS-bT-VfZ"/>
     </inferredMetricsTieBreakers>
 </document>
