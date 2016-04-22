@@ -14,6 +14,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var allergieTextField: UITextField!
     @IBOutlet weak var profilePhotoImageView: UIImageView!
+    @IBOutlet weak var profileLabel: UILabel!
    
     
     // MARK: TextFields
@@ -38,6 +39,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         if let profile = realm.objects(Profile).filter("id == 0").first {
             self.profile = profile
             nameTextField.text = self.profile.name
+            profileLabel.text = self.profile.name
         } else {
             profile.id = 0
             profile.age = 0
@@ -146,6 +148,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
                 try! realm.write {
                     profile.name = text
                 }
+                profileLabel.text = text
             }
             
         }
