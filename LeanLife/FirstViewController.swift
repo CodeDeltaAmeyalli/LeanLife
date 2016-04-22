@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var allergieTextField: UITextField!
     @IBOutlet weak var profilePhotoImageView: UIImageView!
+   
+    
+    // MARK: TextFields
+    
+    
+    // MARK: Realm
+    var profile = Profile()
+    
+    let realm = try! Realm()
+    
 
 
     override func viewDidLoad() {
@@ -21,6 +32,24 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         nameTextField.delegate = self
         ageTextField.delegate = self
         allergieTextField.delegate = self
+        nameTextField.tag = 0
+        ageTextField.tag = 1
+        allergieTextField.tag = 2
+        if let profile = realm.objects(Profile).filter("id == 0").first {
+            self.profile = profile
+            nameTextField.text = self.profile.name
+        } else {
+            profile.id = 0
+            profile.age = 0
+            profile.name = " "
+            profile.allergies = " "
+            try! realm.write {
+                realm.add(profile)
+            }
+        }
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,7 +123,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        
+        textField.resignFirstResponder()
+        /*
         let nextTage=textField.tag+1;
         // Try to find next responder
         let nextResponder=textField.superview?.viewWithTag(nextTage) as UIResponder!
@@ -107,8 +137,19 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         {
             // Not found, so remove keyboard
             textField.resignFirstResponder()
-        }
+        }*/
         return false // We do not want UITextField to insert line-breaks.
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        if textField.tag == 0 {
+            if let text = textField.text {
+                try! realm.write {
+                    profile.name = text
+                }
+            }
+            
+        }
+        
     }
 
 

@@ -15,6 +15,7 @@ class Measurements: Object {
     dynamic var weight = 3.1416
     dynamic var wristMeasure = 3.1416
     dynamic var physicalActivity = 1
+    dynamic var id = 0
     
    /* //MARK: Initializer
     init?(height: Double, weight: Double, wristMeasure: Double, physicalActivity: UIPickerViewDelegate ){

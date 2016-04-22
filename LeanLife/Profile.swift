@@ -14,8 +14,9 @@ class Profile: Object {
     dynamic var photo:String? = ""
     dynamic var name = ""
     dynamic var age = 0
-    dynamic var allergies:String? = ""
+    dynamic var allergies = ""
     dynamic var gender = ""
+    dynamic var id = 0
     
    /* //MARK: Initialization
     init?(photo: UIImage, name: String, age: Int, allergies: String, gender:UISegmentedControlSegment){
