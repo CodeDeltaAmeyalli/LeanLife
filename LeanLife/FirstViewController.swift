@@ -15,6 +15,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var allergieTextField: UITextField!
     @IBOutlet weak var profilePhotoImageView: UIImageView!
     @IBOutlet weak var profileLabel: UILabel!
+    @IBOutlet weak var genderSegmentedController: UISegmentedControl!
    
     
     // MARK: TextFields
@@ -25,26 +26,50 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     
     let realm = try! Realm()
     
-
+    //self = FirstViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // FirstViewController is delegate of textFields
+       
         nameTextField.delegate = self
         ageTextField.delegate = self
         allergieTextField.delegate = self
+         // Tag is asigned so that the code knows who are you talking about
         nameTextField.tag = 0
         ageTextField.tag = 1
         allergieTextField.tag = 2
+        // if let serves to test if something exists, or is defined as
         if let profile = realm.objects(Profile).filter("id == 0").first {
+            // var profile will save what is in Realm
             self.profile = profile
-            nameTextField.text = self.profile.name
+            // it will show the info you've previously saved
+            nameTextField.text = self.profile.name 
             profileLabel.text = self.profile.name
+            allergieTextField.text = self.profile.allergies
+            ageTextField.text = String(self.profile.age)
+            
+            /*if self.profile.gender == "Male"{
+               genderSegmentedController.selectedSegmentIndex == 0
+
+            }
+            
+            else {
+                genderSegmentedController.selectedSegmentIndex == 1
+            } */
+            /*
+ AppDelegate *delegate=[[UIApplication sharedAppliection]delegate];
+ [_Segment setSelectedSegmentIndex:delegate.selectedIndex];
+ } */
+  
         } else {
+            // if there is nothing saved, you will create a new record in realm
             profile.id = 0
             profile.age = 0
             profile.name = " "
             profile.allergies = " "
+            // realm will write and store what you have saved
             try! realm.write {
                 realm.add(profile)
             }
@@ -69,6 +94,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     }
     
     
+    // This allows the user to pick an image. 
+    // Obtained from Apple's Food Tracker
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
@@ -81,7 +108,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         // Set photoImageView to display the selected image.
         
         profilePhotoImageView.image = selectedImage
-        
+        // Set Realm to save image
+        try! realm.write{
+            profile.photo = String(selectedImage)
+        }
         
         
         // Dismiss the picker.
@@ -152,9 +182,42 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
             }
             
         }
+        else if textField.tag == 1 {
+            if let text = Int(textField.text!) {
+                try! realm.write{
+                    profile.age = text
+                }
+            }
+        }
+        else if textField.tag == 2 {
+            if let text = textField.text {
+                try! realm.write{
+                    profile.allergies = text
+                }
+            }
+        }
         
     }
-
+    @IBAction func segmentController(sender: UISegmentedControl) {
+            if sender.selectedSegmentIndex == 0 {
+                try! realm.write {
+                    profile.gender = "Male"
+                }
+            }
+        else if sender.selectedSegmentIndex == 1 {
+            try! self.realm.write {
+                self.profile.gender = "Female"
+            }
+        }
+        
+    }
+    //User changes Selected Control Index 
+ 
+    
 
 }
+   
+
+
+
 

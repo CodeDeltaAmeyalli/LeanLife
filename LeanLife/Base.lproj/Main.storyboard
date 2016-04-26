@@ -100,6 +100,10 @@
                                                                 <exclude reference="eYQ-fl-fIa"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <action selector="indexChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="wdf-qo-toV"/>
+                                                            <action selector="segmentController:" destination="9pv-A4-QxB" eventType="valueChanged" id="Qhk-z2-6b8"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
@@ -158,6 +162,7 @@
                     <connections>
                         <outlet property="ageTextField" destination="kRx-S6-vxM" id="KXe-a5-1py"/>
                         <outlet property="allergieTextField" destination="fr3-n7-7hR" id="0fU-Eh-n14"/>
+                        <outlet property="genderSegmentedController" destination="4C2-eW-Xu2" id="WmP-ve-8MW"/>
                         <outlet property="nameTextField" destination="8G0-gg-ioH" id="nTk-Xb-YXz"/>
                         <outlet property="profileLabel" destination="KQZ-1w-vlD" id="RaB-9S-7m6"/>
                         <outlet property="profilePhotoImageView" destination="dFd-vg-P2u" id="n8X-lS-LpV"/>

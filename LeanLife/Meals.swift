@@ -6,9 +6,9 @@
 //  Copyright © 2016 Escuela Ameyalli. All rights reserved.
 //
 
-import UIKit
+import RealmSwift
 
-class Meal {
+class Meal: Object {
     // MARK: Properties 
     dynamic var photo = ""
     dynamic var name = ""
