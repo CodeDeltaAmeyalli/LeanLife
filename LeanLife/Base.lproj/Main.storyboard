@@ -198,10 +198,13 @@
                                         <rect key="frame" x="0.0" y="51" width="520" height="45"/>
                                         <segments>
                                             <segment title="Lose "/>
-                                            <segment title="Mantain"/>
+                                            <segment title="Maintain"/>
                                             <segment title="Gain"/>
                                         </segments>
                                         <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="indexChanged:" destination="M9t-Zg-8bE" eventType="valueChanged" id="0bH-Jm-O9l"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
@@ -313,6 +316,10 @@ you should consume per day...</string>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Goal" image="goalStablishmentTabIcon" id="7Km-Wa-Z74"/>
+                    <connections>
+                        <outlet property="WeightGoal" destination="Qyf-wz-kjP" id="QnU-og-MFp"/>
+                        <outlet property="segmentesControl" destination="w1X-ap-I2z" id="B0Y-Vv-Ncb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldO-Hs-boy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1939,9 +1946,9 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tSu-mQ-773"/>
-        <segue reference="0wD-2Q-AuV"/>
-        <segue reference="hlS-bT-VfZ"/>
+        <segue reference="sHX-L5-ICq"/>
+        <segue reference="N4P-pL-GgA"/>
         <segue reference="oIS-jw-ZBf"/>
+        <segue reference="hlS-bT-VfZ"/>
     </inferredMetricsTieBreakers>
 </document>
