@@ -318,6 +318,10 @@ you should consume per day...</string>
                     <tabBarItem key="tabBarItem" title="Goal" image="goalStablishmentTabIcon" id="7Km-Wa-Z74"/>
                     <connections>
                         <outlet property="WeightGoal" destination="Qyf-wz-kjP" id="QnU-og-MFp"/>
+                        <outlet property="caloriesLabel" destination="V1a-y7-gon" id="CD2-WT-o8O"/>
+                        <outlet property="carbohydratesLabel" destination="lOd-hp-jn5" id="BEK-qH-xSY"/>
+                        <outlet property="fatsLabel" destination="snd-st-abj" id="107-lI-4I1"/>
+                        <outlet property="proteinLabel" destination="Hmn-fZ-4df" id="6Ae-ej-xp5"/>
                         <outlet property="segmentesControl" destination="w1X-ap-I2z" id="B0Y-Vv-Ncb"/>
                     </connections>
                 </viewController>

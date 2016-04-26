@@ -13,6 +13,7 @@ class Goal: Object {
     //MARK: Properties
     dynamic var goal = ""
     dynamic var id = 0
+    dynamic var dailyCalories = 0
     
     /* //MARK: Initialization
      init?(photo: UIImage, name: String, age: Int, allergies: String, gender:UISegmentedControlSegment){
@@ -48,3 +49,7 @@ class Shape: Object {
      } */
     
 }
+
+
+
+

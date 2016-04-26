@@ -11,6 +11,10 @@ import RealmSwift
 
 
 class GoalViewController: UIViewController {
+    
+    
+
+    
     // MARK: Realm
     var meta = Goal()
     
@@ -18,6 +22,11 @@ class GoalViewController: UIViewController {
     
     @IBOutlet weak var WeightGoal: UILabel!
     @IBOutlet weak var segmentesControl: UISegmentedControl!
+    @IBOutlet weak var proteinLabel: UILabel!
+    @IBOutlet weak var carbohydratesLabel: UILabel!
+    @IBOutlet weak var caloriesLabel: UILabel!
+   
+    @IBOutlet weak var fatsLabel: UILabel!
     @IBAction func indexChanged(sender: UISegmentedControl){
         switch segmentesControl.selectedSegmentIndex
         {
@@ -28,6 +37,7 @@ class GoalViewController: UIViewController {
                     meta.goal = "Lose"
                 }
                 WeightGoal.text = meta.goal
+                
     
             case 1:
                 
@@ -67,6 +77,29 @@ class GoalViewController: UIViewController {
         }
         
     }
+    func proteinIntake(calorieIntake: Int) {
+         var proteinIntake = (0.20*Double(calorieIntake))
+        
+        return proteinIntake = (proteinIntake*1/(4))
+    }
+    
+    func carbohydratesIntake(calorieIntake: Int) {
+        
+        var carbohydratesIntake = (0.60*Double(calorieIntake))
+        
+        return carbohydratesIntake = (carbohydratesIntake*1/(4))
+        
+    }
+    
+    func fatIntake(calorieIntake: Int) {
+        var fatIntake = (0.20*Double(calorieIntake))
+        return fatIntake = (fatIntake*1/(9))
+        
+    }
+    
+
+
+    
     
    /* let proteinIntake = calorieIntake(currentValue)
         )
@@ -99,7 +132,13 @@ class GoalViewController: UIViewController {
             }
         }
         
+        proteinLabel.text = "\(proteinIntake)"
         
+/*self.profile = profile
+ nameTextField.text = self.profile.name
+ profileLabel.text = self.profile.name*/
+ 
+ 
             }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
