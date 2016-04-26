@@ -16,6 +16,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var profilePhotoImageView: UIImageView!
     @IBOutlet weak var profileLabel: UILabel!
     @IBOutlet weak var genderSegmentedController: UISegmentedControl!
+    
+    @IBOutlet weak var genderLabel: UILabel!
    
     
     // MARK: TextFields
@@ -49,19 +51,18 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
             profileLabel.text = self.profile.name
             allergieTextField.text = self.profile.allergies
             ageTextField.text = String(self.profile.age)
-            
-            /*if self.profile.gender == "Male"{
-               genderSegmentedController.selectedSegmentIndex == 0
-
+            genderLabel.text = profile.gender
+            switch profile.gender {
+                case "Male":
+                    genderSegmentedController.selectedSegmentIndex = 0
+                case "Female" :
+                    genderSegmentedController.selectedSegmentIndex = 1
+                default:
+                    genderSegmentedController.selectedSegmentIndex = UISegmentedControlNoSegment
+                
             }
             
-            else {
-                genderSegmentedController.selectedSegmentIndex == 1
-            } */
-            /*
- AppDelegate *delegate=[[UIApplication sharedAppliection]delegate];
- [_Segment setSelectedSegmentIndex:delegate.selectedIndex];
- } */
+          
   
         } else {
             // if there is nothing saved, you will create a new record in realm
@@ -198,7 +199,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         }
         
     }
-    @IBAction func segmentController(sender: UISegmentedControl) {
+    /*@IBAction func segmentController(sender: UISegmentedControl) {
             if sender.selectedSegmentIndex == 0 {
                 try! realm.write {
                     profile.gender = "Male"
@@ -210,9 +211,27 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
             }
         }
         
-    }
+    } */
     //User changes Selected Control Index 
  
+    @IBAction func indexChanged(sender: AnyObject) {
+        switch genderSegmentedController.selectedSegmentIndex{
+            
+        case 0:
+            try! realm.write {
+                profile.gender = "Male"
+            }
+            genderLabel.text = profile.gender
+        case 1:
+            try! realm.write{
+                profile.gender = "Female"
+            }
+            genderLabel.text = profile.gender
+        default:
+            break;
+            
+        }
+    }
     
 
 }
