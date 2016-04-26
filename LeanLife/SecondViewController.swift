@@ -50,8 +50,22 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             heightTextField.text = "\(self.measurements.height)"
             diameterTextField.text = "\(self.measurements.wristMeasure)"
             physicalActivityPicker.text = "\(measurements.physicalActivity)"
-            pickerActivity.selectRow(2, inComponent: 0, animated: false)
-            
+            self.pickerActivity.selectRow(0, inComponent: 0, animated: false)
+            switch measurements.physicalActivity {
+            case 0:
+                physicalActivityPicker.text = "Sedentary"
+            case 1:
+                physicalActivityPicker.text = "Lightly Active"
+            case 2:
+                physicalActivityPicker.text = "Moderately Active"
+            case 3:
+                physicalActivityPicker.text = "Very Active"
+            case 4:
+                physicalActivityPicker.text = "Extra Active"
+            default:
+                physicalActivityPicker.text = "Physical Activity"
+        
+            }
         }
         else {
             measurements.weight = 0
@@ -97,9 +111,28 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
-        physicalActivityPicker.text = "\(row)"
+        switch row {
+        case 0:
+            physicalActivityPicker.text = "Sedentary"
+            
+        case 1:
+            physicalActivityPicker.text = "Lightly Active"
+          
+        case 2:
+            physicalActivityPicker.text = "Moderately Active"
+            
+        case 3:
+            physicalActivityPicker.text = "Very Active"
+            
+        case 4:
+            physicalActivityPicker.text = "Extra Active"
+            
+        default:
+            physicalActivityPicker.text = "Physical Activity"
+        }
+        
         try! realm.write {
-            measurements.physicalActivity = row 
+        measurements.physicalActivity = row
         }
     }
     // MARK: UITextField
