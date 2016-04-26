@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
@@ -14,6 +15,7 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     @IBOutlet weak var weightTextField: UITextField!
 
+    @IBOutlet weak var physicalActivityPicker: UILabel!
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var pickerActivity: UIPickerView!
     @IBOutlet weak var diameterTextField: UITextField!
@@ -21,25 +23,56 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var activityPickerView: UIPickerView!
     var pickerActivityData: [String] = [String]()
     
+    
+    // MARK: Realm
+    var measurements = Measurements()
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         //Connect data:
         
+        
         weightTextField.delegate = self
         heightTextField.delegate = self
         diameterTextField.delegate = self
         self.pickerActivity.delegate = self
         self.pickerActivity.dataSource = self
+    
+        weightTextField.tag = 0
+        heightTextField.tag = 1
+        diameterTextField.tag = 2
+        if let measurements = realm.objects(Measurements).filter("id == 0").first {
+            self.measurements = measurements
+            weightTextField.text = "\(self.measurements.weight)"
+            heightTextField.text = "\(self.measurements.height)"
+            diameterTextField.text = "\(self.measurements.wristMeasure)"
+            physicalActivityPicker.text = "\(measurements.physicalActivity)"
+            pickerActivity.selectRow(2, inComponent: 0, animated: false)
+            
+        }
+        else {
+            measurements.weight = 0
+            measurements.height = 0
+            measurements.wristMeasure = 0
+            measurements.physicalActivity = 0
+            measurements.id = 0
+            try! realm.write {
+                realm.add(measurements) 
+            }
+        }
         
         //Insert objects in the array.
-        pickerActivityData = ["Sedentary - little or no exercise", "Lightly Active - 1-3 times/week", "Moderately Active - 3-5 times/week", "Very Active - 6-7 times/week", "Extra Active"
-        ]
+        pickerActivityData = ["Sedentary - little or no exercise", "Lightly Active - 1-3 times/week", "Moderately Active - 3-5 times/week", "Very Active - 6-7 times/week", "Extra Active"]
         
     
     }
+  
+    
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,6 +97,10 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
+        physicalActivityPicker.text = "\(row)"
+        try! realm.write {
+            measurements.physicalActivity = row 
+        }
     }
     // MARK: UITextField
     /* found in: http://stackoverflow.com/questions/1347779/how-to-navigate-through-textfields-next-done-buttons */
@@ -83,9 +120,40 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             textField.resignFirstResponder()
         }
         return false // We do not want UITextField to insert line-breaks.
+        
+    }
+    
+// Save user's info
+    func textFieldDidEndEditing(textField: UITextField) {
+         if textField.tag == 0 {
+            if let text = Double(textField.text!) {
+                try! realm.write {
+                    measurements.weight = text
+                }
+            }
+        }
+        
+        if textField.tag == 1 {
+            if let text = Double(textField.text!) {
+                try! realm.write {
+                    measurements.height = text
+                }
+            }
+        }
+        
+        if textField.tag == 2 {
+            if let text = Double(textField.text!) {
+                try! realm.write {
+                    measurements.wristMeasure = text
+                }
+            }
+        }
     }
     
 
 
-}
+ 
+ 
+ 
 
+}

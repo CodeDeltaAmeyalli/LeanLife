@@ -33,6 +33,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         nameTextField.delegate = self
         ageTextField.delegate = self
         allergieTextField.delegate = self
+        // Add tags to TextField to identify them
         nameTextField.tag = 0
         ageTextField.tag = 1
         allergieTextField.tag = 2
