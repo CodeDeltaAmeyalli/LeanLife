@@ -75,7 +75,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if saveButton === sender {
-            
+            myMeal.mealName = mealNameTextField.text!
             try! realm.write {
                 realm.add(myMeal)
             }
@@ -109,26 +109,80 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         if textField.tag == 0 {
             if let text = textField.text {
                 try! realm.write {
-                    profile.name = text
-                    
-                    
-                    self.myMeal.mealName = mealNameTextField.text!
-                    self.saveTabButton = saveButton.action
-                    self.myMeal.quantity = Double(quantityTextField.text!)!
-                    self.myMeal.quantitySegementedControl = quantitySegmentedControl.selectedSegmentIndex
-                    self.myMeal.carbohydrates = Double(carbohydratesTextField.text!)!
-                    self.myMeal.proteins = Double(proteinsTextField.text!)!
-                    self.myMeal.fat = Double(fatTextField.text!)!
-                    self.myMeal.calories = Double(caloriesTextField.text!)!
-                    self.myMeal.image = UIImage(contentsOfFile: imageImageView.image)
-                    
+                    self.myMeal.mealName = text
                 }
-                profileLabel.text = text
             }
             
         }
+        if textField.tag == 1 {
+            if let text = Double(textField.text!){
+                if text >= 0 {
+                    try! realm.write {
+                        self.myMeal.quantity = text
+                    }
+
+                }
+                
+            }
+        }
+        if textField.tag == 2 {
+            if let text = Double(textField.text!){
+                if text >= 0 {
+                    try! realm.write {
+                        self.myMeal.carbohydrates = text
+                    }
+                    
+                }
+                
+            }
+        }
         
+        if textField.tag == 3 {
+            if let text = Double(textField.text!){
+                if text >= 0 {
+                    try! realm.write {
+                        self.myMeal.proteins = text
+                    }
+                    
+                }
+                
+            }
+        }
+        if textField.tag == 4 {
+            if let text = Double(textField.text!){
+                if text >= 0 {
+                    try! realm.write {
+                        self.myMeal.fat = text
+                    }
+                    
+                }
+                
+            }
+        }
+        if textField.tag == 5 {
+            if let text = Double(textField.text!){
+                if text >= 0 {
+                    try! realm.write {
+                        self.myMeal.calories = text
+                    }
+                    
+                }
+                
+            }
+        }
     }
   
 
 }
+
+
+/*
+ self.myMeal.quantity = Double(quantityTextField.text!)!
+ self.myMeal.quantitySegementedControl = quantitySegmentedControl.selectedSegmentIndex
+ self.myMeal.carbohydrates = Double(carbohydratesTextField.text!)!
+ self.myMeal.proteins = Double(proteinsTextField.text!)!
+ self.myMeal.fat = Double(fatTextField.text!)!
+ self.myMeal.calories = Double(caloriesTextField.text!)!
+ self.myMeal.image = UIImage(contentsOfFile: imageImageView.image)
+ */
+
