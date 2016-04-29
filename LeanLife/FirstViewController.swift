@@ -19,13 +19,12 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     
     // MARK: TextFields
     
-    
     // MARK: Realm
+    
     var profile = Profile()
     
     let realm = try! Realm()
     
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,7 +120,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         
         presentViewController(imagePickerController, animated: true, completion: nil)
         
-        
+        // If let -> checar que si sea lo que quiero, ej. numeros positivos etc.
         
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {

@@ -10,15 +10,20 @@ import UIKit
 
 class Meal {
     // MARK: Properties 
-    dynamic var photo = ""
-    dynamic var name = ""
+    dynamic var image:String? = ""
+    dynamic var mealName = ""
     dynamic var date = ""
-    dynamic var quantity = ""
-    dynamic var proteins = ""
-    dynamic var carbohydrates = ""
-    dynamic var fat = ""
-    dynamic var calories = ""
-    dynamic var satiety = 0
+    dynamic var quantity = 0.0
+    dynamic var proteins = 0.0
+    dynamic var carbohydrates = 0.0
+    dynamic var fat = 0.0
+    dynamic var calories = 0.0
+    dynamic var satiety = 0.0
+    dynamic var id = 0
+    dynamic var quantitySegmented = ""
+    dynamic var foodName:String? = ""
+    
+
     
     /*//MARK: Initialization
     init?(photo: UIImage, name: String, date:NSDate, quantity: Double, proteins: Double, carbohydrates: Double, fat: Double, calories: Int){
