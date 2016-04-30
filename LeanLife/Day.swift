@@ -6,23 +6,23 @@
 //  Copyright © 2016 Escuela Ameyalli. All rights reserved.
 //
 
-import UIKit
+import RealmSwift
 
-class Day {
+class Day: Object {
     
     //MARK: Properties 
-    var date: NSDate
-    var dailyCal: Int
-    var consumedCal: Int
-    var proteins: Double
-    var carbohydrates: Double
-    var fat: Double
-    var water: Int
-    var goal: String
-    var usersPhoto: UIImage?
-    var usersName: String
+    dynamic var date = ""
+    dynamic var dailyCal = 0
+    dynamic var consumedCal = ""
+    dynamic var proteins = ""
+    dynamic var carbohydrates = ""
+    dynamic var fat = ""
+    dynamic var water = ""
+    dynamic var goal = ""
+    dynamic var usersPhoto:String? = ""
+    dynamic var usersName = ""
     
-    //MARK: Initialization 
+    /* //MARK: Initialization
     init?(date: NSDate, dailyCal: Int, consumedCal: Int, proteins: Double, carbohydrates: Double, fat: Double, water: Int, goal: String, usersPhoto:UIImage, usersName: String){
         //Initialize stored Properties 
         self.date = date
@@ -36,7 +36,7 @@ class Day {
         self.usersName = usersName
         self.usersPhoto = usersPhoto
         
-    }
+    } */
     
     
 }

@@ -782,27 +782,6 @@ you should consume per day...</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2hP-iB-Hi7">
-                                <rect key="frame" x="20" y="294" width="560" height="243"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Physical Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5L-4C-LXf">
-                                        <rect key="frame" x="193" y="0.0" width="175" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csY-qR-GeS">
-                                        <rect key="frame" x="0.0" y="27" width="560" height="216"/>
-                                    </pickerView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="csY-qR-GeS" firstAttribute="top" secondItem="W5L-4C-LXf" secondAttribute="bottom" constant="12" id="7cl-q2-vKU"/>
-                                    <constraint firstItem="csY-qR-GeS" firstAttribute="leading" secondItem="2hP-iB-Hi7" secondAttribute="leading" id="GDv-Qq-ugk"/>
-                                    <constraint firstAttribute="bottom" secondItem="csY-qR-GeS" secondAttribute="bottom" id="oHG-ZX-8sY"/>
-                                    <constraint firstAttribute="trailing" secondItem="csY-qR-GeS" secondAttribute="trailing" id="uUt-xC-Ffl"/>
-                                    <constraint firstAttribute="bottom" secondItem="csY-qR-GeS" secondAttribute="bottom" id="vUE-Ej-RMu"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ytY-5n-ObA">
                                 <rect key="frame" x="40" y="136" width="520" height="111"/>
                                 <subviews>
@@ -902,6 +881,27 @@ you should consume per day...</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2hP-iB-Hi7">
+                                <rect key="frame" x="40" y="279" width="560" height="243"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Physical Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5L-4C-LXf">
+                                        <rect key="frame" x="193" y="0.0" width="175" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="0.29411764705882354" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csY-qR-GeS">
+                                        <rect key="frame" x="0.0" y="27" width="560" height="216"/>
+                                    </pickerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="csY-qR-GeS" firstAttribute="top" secondItem="W5L-4C-LXf" secondAttribute="bottom" constant="12" id="7cl-q2-vKU"/>
+                                    <constraint firstItem="csY-qR-GeS" firstAttribute="leading" secondItem="2hP-iB-Hi7" secondAttribute="leading" id="GDv-Qq-ugk"/>
+                                    <constraint firstAttribute="bottom" secondItem="csY-qR-GeS" secondAttribute="bottom" id="oHG-ZX-8sY"/>
+                                    <constraint firstAttribute="trailing" secondItem="csY-qR-GeS" secondAttribute="trailing" id="uUt-xC-Ffl"/>
+                                    <constraint firstAttribute="bottom" secondItem="csY-qR-GeS" secondAttribute="bottom" id="vUE-Ej-RMu"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -931,6 +931,7 @@ you should consume per day...</string>
                         <outlet property="activityPickerView" destination="csY-qR-GeS" id="Lvg-9o-cZc"/>
                         <outlet property="diameterTextField" destination="KAe-hx-2Ko" id="qVo-5o-BSP"/>
                         <outlet property="heightTextField" destination="6Nc-bt-WY3" id="Ntt-Z3-LN6"/>
+                        <outlet property="physicalActivityPicker" destination="W5L-4C-LXf" id="j7V-Xl-bmu"/>
                         <outlet property="pickerActivity" destination="csY-qR-GeS" id="ei6-EB-jvU"/>
                         <outlet property="weightTextField" destination="chV-gG-j2S" id="sLf-74-VcE"/>
                     </connections>
@@ -1944,9 +1945,9 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tSu-mQ-773"/>
+        <segue reference="SeP-0r-Kyd"/>
+        <segue reference="oIS-jw-ZBf"/>
         <segue reference="0wD-2Q-AuV"/>
         <segue reference="hlS-bT-VfZ"/>
-        <segue reference="oIS-jw-ZBf"/>
     </inferredMetricsTieBreakers>
 </document>
