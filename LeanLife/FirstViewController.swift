@@ -38,7 +38,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         nameTextField.delegate = self
         ageTextField.delegate = self
         allergieTextField.delegate = self
-         // Tag is asigned so that the code knows who are you talking about
+        // Add tags to TextField to identify them
         nameTextField.tag = 0
         ageTextField.tag = 1
         allergieTextField.tag = 2
