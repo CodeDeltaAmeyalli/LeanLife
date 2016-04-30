@@ -913,23 +913,55 @@ you should consume per day...</string>
                                     <constraint firstAttribute="bottom" secondItem="csY-qR-GeS" secondAttribute="bottom" id="vUE-Ej-RMu"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BMI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsN-ph-uoo">
+                                <rect key="frame" x="73" y="255" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiF-SD-MzO">
+                                <rect key="frame" x="134" y="255" width="14" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVN-4O-eGh">
+                                <rect key="frame" x="269" y="255" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Body Frame" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCD-oA-acz">
+                                <rect key="frame" x="169" y="255" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GZj-hy-MzJ" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="AJh-Ut-ONF"/>
                             <constraint firstItem="2hP-iB-Hi7" firstAttribute="top" secondItem="ytY-5n-ObA" secondAttribute="bottom" constant="48" id="AYg-Ih-8VW"/>
                             <constraint firstItem="ytY-5n-ObA" firstAttribute="top" secondItem="yFa-AJ-cLz" secondAttribute="bottom" constant="33" id="BYr-Rm-YH1"/>
+                            <constraint firstItem="qsN-ph-uoo" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="53" id="EOZ-cQ-Q3N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GZj-hy-MzJ" secondAttribute="trailing" constant="-20" id="LQ3-Ic-Uov"/>
+                            <constraint firstItem="aiF-SD-MzO" firstAttribute="leading" secondItem="qsN-ph-uoo" secondAttribute="trailing" constant="31" id="Mcc-Eh-dpt"/>
+                            <constraint firstItem="aiF-SD-MzO" firstAttribute="top" secondItem="ytY-5n-ObA" secondAttribute="bottom" constant="8" id="OB3-wV-Ah5"/>
                             <constraint firstItem="yFa-AJ-cLz" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="XR1-hT-C6m"/>
                             <constraint firstItem="GZj-hy-MzJ" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" id="e3M-1b-Lvk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2hP-iB-Hi7" secondAttribute="trailing" id="e5B-fW-DJn"/>
+                            <constraint firstItem="qsN-ph-uoo" firstAttribute="top" secondItem="ytY-5n-ObA" secondAttribute="bottom" constant="8" id="eJc-CT-85P"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ytY-5n-ObA" secondAttribute="trailing" constant="20" id="fcM-fR-LqU"/>
                             <constraint firstItem="2hP-iB-Hi7" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="gfV-ab-ipy"/>
+                            <constraint firstItem="vVN-4O-eGh" firstAttribute="leading" secondItem="lCD-oA-acz" secondAttribute="trailing" constant="8" id="h0B-pn-mty"/>
                             <constraint firstItem="yFa-AJ-cLz" firstAttribute="top" secondItem="GZj-hy-MzJ" secondAttribute="bottom" constant="17" id="iu8-sT-tXI"/>
                             <constraint firstItem="GZj-hy-MzJ" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" id="kLX-fB-Rif"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="2hP-iB-Hi7" secondAttribute="bottom" id="mOr-bj-Y2D"/>
                             <constraint firstItem="ytY-5n-ObA" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="20" id="nYE-va-QhL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ytY-5n-ObA" secondAttribute="trailing" id="qR9-xE-EKX"/>
+                            <constraint firstItem="lCD-oA-acz" firstAttribute="leading" secondItem="aiF-SD-MzO" secondAttribute="trailing" constant="21" id="sIE-lh-4hM"/>
+                            <constraint firstItem="vVN-4O-eGh" firstAttribute="top" secondItem="ytY-5n-ObA" secondAttribute="bottom" constant="8" id="vlS-Uf-acD"/>
+                            <constraint firstItem="lCD-oA-acz" firstAttribute="top" secondItem="ytY-5n-ObA" secondAttribute="bottom" constant="8" id="y5M-Ku-dhk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -940,8 +972,10 @@ you should consume per day...</string>
                     <tabBarItem key="tabBarItem" title="Measurements" image="ruleTabIconMeasurements" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="activityPickerView" destination="csY-qR-GeS" id="Lvg-9o-cZc"/>
+                        <outlet property="bodyFrameLabel" destination="vVN-4O-eGh" id="x3d-9a-5gm"/>
                         <outlet property="diameterTextField" destination="KAe-hx-2Ko" id="qVo-5o-BSP"/>
                         <outlet property="heightTextField" destination="6Nc-bt-WY3" id="Ntt-Z3-LN6"/>
+                        <outlet property="massLabel" destination="aiF-SD-MzO" id="eIQ-aY-l3p"/>
                         <outlet property="physicalActivityPicker" destination="W5L-4C-LXf" id="j7V-Xl-bmu"/>
                         <outlet property="pickerActivity" destination="csY-qR-GeS" id="ei6-EB-jvU"/>
                         <outlet property="weightTextField" destination="chV-gG-j2S" id="sLf-74-VcE"/>
