@@ -1198,6 +1198,10 @@ Calories</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Daily Progress " image="dailyProgressTabIcon" id="KAt-f2-EIS"/>
                     <connections>
+                        <outlet property="carbohydratesProgressBar" destination="mnu-hu-M4i" id="27N-jo-aCs"/>
+                        <outlet property="energyProgressBar" destination="93A-0C-A1F" id="sck-0q-TK4"/>
+                        <outlet property="fatProgressBar" destination="xzU-1L-Xe9" id="PMv-UW-boa"/>
+                        <outlet property="proteinsProgressBar" destination="VnS-ks-RQk" id="plR-C4-SMN"/>
                         <outlet property="stepper" destination="cgV-je-cL8" id="v4k-bD-5F3"/>
                         <outlet property="waterProgressBar" destination="Cda-wn-r4z" id="q5l-jd-uEy"/>
                     </connections>
@@ -1945,9 +1949,9 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tSu-mQ-773"/>
-        <segue reference="0wD-2Q-AuV"/>
+        <segue reference="8ah-3G-wcu"/>
         <segue reference="hlS-bT-VfZ"/>
         <segue reference="oIS-jw-ZBf"/>
+        <segue reference="0wD-2Q-AuV"/>
     </inferredMetricsTieBreakers>
 </document>

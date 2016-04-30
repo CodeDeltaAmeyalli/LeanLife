@@ -7,22 +7,24 @@
 //
 
 import UIKit
+import RealmSwift
 
-class Day {
+class Day: Object{
     
     //MARK: Properties 
-    var date: NSDate
-    var dailyCal: Int
-    var consumedCal: Int
-    var proteins: Double
-    var carbohydrates: Double
-    var fat: Double
-    var water: Int
-    var goal: String
-    var usersPhoto: UIImage?
-    var usersName: String
+    dynamic var date: NSDate!
+    dynamic var dailyCal = 0.0
+    dynamic var consumedCal = 0.0
+    dynamic var proteins = 0.0
+    dynamic var carbohydrates = 0.0
+    dynamic var fat = 0.0
+    dynamic var water = 0
+    dynamic var goal = ""
+    dynamic var usersPhoto: String? = ""
+    dynamic var usersName = ""
+    dynamic var id = 0
     
-    //MARK: Initialization 
+   /* //MARK: Initialization
     init?(date: NSDate, dailyCal: Int, consumedCal: Int, proteins: Double, carbohydrates: Double, fat: Double, water: Int, goal: String, usersPhoto:UIImage, usersName: String){
         //Initialize stored Properties 
         self.date = date
@@ -37,6 +39,5 @@ class Day {
         self.usersPhoto = usersPhoto
         
     }
-    
-    
+ */
 }
