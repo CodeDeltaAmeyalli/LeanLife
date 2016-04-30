@@ -1956,7 +1956,8 @@ Calories</string>
         <image name="womenBodyShape9" width="78" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SeP-0r-Kyd"/>
+        <segue reference="sHX-L5-ICq"/>
+        <segue reference="N4P-pL-GgA"/>
         <segue reference="oIS-jw-ZBf"/>
         <segue reference="0wD-2Q-AuV"/>
         <segue reference="hlS-bT-VfZ"/>

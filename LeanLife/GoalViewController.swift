@@ -17,6 +17,8 @@ class GoalViewController: UIViewController {
     
     // MARK: Realm
     var meta = Goal()
+    var profile = Profile()
+    var measurements = Measurements()
     
     let realm = try! Realm()
     
@@ -37,7 +39,7 @@ class GoalViewController: UIViewController {
                     meta.goal = "Lose"
                 }
                 WeightGoal.text = meta.goal
-                
+
     
             case 1:
                 
@@ -63,18 +65,70 @@ class GoalViewController: UIViewController {
     
     //MARK: Actions 
     
-    func calorieIntake(weight: Double, height: Double, age: Double, gender: String)-> Double {
+    func calorieIntake(weight: Double, height: Double, age: Double, gender: String)-> Int {
         let weigthAdjusted = (10*weight)
         let heightInCentimeters = (height*100)
         let heightAdjusted = (6.25*heightInCentimeters)
         let ageAdjusted = (5*age)
-        if gender == "male" {
-            return weigthAdjusted + heightAdjusted - ageAdjusted + 5 
+        var calories = 0
+        switch measurements.physicalActivity {
+        case 0:
+            if gender == "male" {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted + 5)*1.2))
+            } else {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted - 161)*1.2))
+                
+            }
+        case 1:
+            if gender == "male" {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted + 5)*1.375))
+            } else {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted - 161)*1.375))
+                
+            }
+           
+        case 2:
+            if gender == "male" {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted + 5)*1.55))
+            } else {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted - 161)*1.55))
+                
+            }
             
-        } else {
-            return weigthAdjusted + heightAdjusted - ageAdjusted - 161
+        case 3:
+            if gender == "male" {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted + 5)*1.725))
+            } else {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted - 161)*1.725))
+                
+            }
+            
+        case 4:
+            if gender == "male" {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted + 5)*1.9))
+            } else {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted - 161)*1.9))
+                
+            }
+         
+        default:
+            if gender == "male" {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted + 5)*1.2))
+            } else {
+                calories = Int(round((weigthAdjusted + heightAdjusted - ageAdjusted - 161)*1.2))
+                
+            }
+        
             
         }
+        try! realm.write {
+            meta.dailyCalories = calories
+        }
+        return calories
+
+
+        
+      
         
     }
     func proteinIntake(calorieIntake: Int) {
@@ -124,12 +178,21 @@ class GoalViewController: UIViewController {
             default:
                 segmentesControl.selectedSegmentIndex = UISegmentedControlNoSegment
             }
+            if let profile = realm.objects(Profile).filter("id == 0").first{
+                self.profile = profile
+                if let measurements = realm.objects(Measurements).filter("id == 0").first{
+                    self.measurements = measurements
+                }
+                
+            }
+
         } else {
             meta.goal = " "
             meta.id = 0
             try! realm.write{
                 realm.add(meta)
             }
+            
         }
         
         proteinLabel.text = "\(proteinIntake)"

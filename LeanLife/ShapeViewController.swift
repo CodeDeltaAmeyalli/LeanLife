@@ -36,35 +36,35 @@ class ShapeViewController: UIViewController {
     */
     
     @IBAction func shape1(sender: UITapGestureRecognizer) {
-        shapeSelectedLabel.text = "Selected boy shape : 1"
+        shapeSelectedLabel.text = "Selected body shape : 1"
         shape1.highlighted = true
     }
     @IBAction func shape2(sender: UITapGestureRecognizer) {
-        shapeSelectedLabel.text = "Selected boy shape : 2"
+        shapeSelectedLabel.text = "Selected body shape : 2"
     }
     
     @IBAction func shape3(sender: UITapGestureRecognizer) {
-         shapeSelectedLabel.text = "Selected boy shape : 3"
+         shapeSelectedLabel.text = "Selected body shape : 3"
     }
     
     @IBAction func shape4(sender: AnyObject) {
-        shapeSelectedLabel.text = "Selected boy shape : 4"
+        shapeSelectedLabel.text = "Selected body shape : 4"
     }
     @IBAction func shape5(sender: AnyObject) {
-        shapeSelectedLabel.text = "Selected boy shape : 5"
+        shapeSelectedLabel.text = "Selected body shape : 5"
     }
 
     @IBAction func shape6(sender: AnyObject) {
-        shapeSelectedLabel.text = "Selected boy shape : 6"
+        shapeSelectedLabel.text = "Selected body shape : 6"
     }
     @IBAction func shape7(sender: AnyObject) {
-        shapeSelectedLabel.text = "Selected boy shape : 7"
+        shapeSelectedLabel.text = "Selected body shape : 7"
     }
     @IBAction func shape8(sender: AnyObject) {
-        shapeSelectedLabel.text = "Selected boy shape : 8"
+        shapeSelectedLabel.text = "Selected body shape : 8"
     }
     @IBAction func shape9(sender: AnyObject) {
-        shapeSelectedLabel.text = "Selected boy shape : 9"
+        shapeSelectedLabel.text = "Selected body shape : 9"
     }
     
  
