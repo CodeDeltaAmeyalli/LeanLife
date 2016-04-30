@@ -495,10 +495,10 @@ you should consume per day...</string>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="S4P-CU-PA9">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="210"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zK1-9A-MFX">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zK1-9A-MFX">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="210"/>
                                                 <subviews>
-                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="womenBodyShape1" translatesAutoresizingMaskIntoConstraints="NO" id="jP8-Qv-ocP">
+                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape1" translatesAutoresizingMaskIntoConstraints="NO" id="jP8-Qv-ocP">
                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="188"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -508,7 +508,7 @@ you should consume per day...</string>
                                                             <outletCollection property="gestureRecognizers" destination="NOV-PO-1e1" appends="YES" id="flk-kw-7L6"/>
                                                         </connections>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfY-Ry-GzH">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfY-Ry-GzH">
                                                         <rect key="frame" x="0.0" y="188" width="55" height="22"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -516,10 +516,10 @@ you should consume per day...</string>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bZR-sd-VBt">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bZR-sd-VBt">
                                                 <rect key="frame" x="67" y="0.0" width="55" height="210"/>
                                                 <subviews>
-                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="womenBodyShape2" translatesAutoresizingMaskIntoConstraints="NO" id="SI8-y5-gQe">
+                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape2" translatesAutoresizingMaskIntoConstraints="NO" id="SI8-y5-gQe">
                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="189"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -529,7 +529,7 @@ you should consume per day...</string>
                                                             <outletCollection property="gestureRecognizers" destination="XY4-ux-Zii" appends="YES" id="iHC-ts-y8w"/>
                                                         </connections>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j6-vt-mUM">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j6-vt-mUM">
                                                         <rect key="frame" x="0.0" y="189" width="55" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -537,10 +537,10 @@ you should consume per day...</string>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="180-bv-NcV">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="180-bv-NcV">
                                                 <rect key="frame" x="134" y="0.0" width="61" height="210"/>
                                                 <subviews>
-                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="womenBodyShape3" translatesAutoresizingMaskIntoConstraints="NO" id="49A-cB-0SD">
+                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape3" translatesAutoresizingMaskIntoConstraints="NO" id="49A-cB-0SD">
                                                         <rect key="frame" x="0.0" y="0.0" width="61" height="189"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -550,7 +550,7 @@ you should consume per day...</string>
                                                             <outletCollection property="gestureRecognizers" destination="V3w-ls-YnF" appends="YES" id="EqG-CR-iJ1"/>
                                                         </connections>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crL-t4-jRk">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crL-t4-jRk">
                                                         <rect key="frame" x="0.0" y="189" width="61" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -558,10 +558,10 @@ you should consume per day...</string>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ch1-kn-r0b">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ch1-kn-r0b">
                                                 <rect key="frame" x="207" y="0.0" width="60" height="210"/>
                                                 <subviews>
-                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="womenBodyShape4" translatesAutoresizingMaskIntoConstraints="NO" id="hjv-qa-2Sl">
+                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape4" translatesAutoresizingMaskIntoConstraints="NO" id="hjv-qa-2Sl">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="189"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -571,7 +571,7 @@ you should consume per day...</string>
                                                             <outletCollection property="gestureRecognizers" destination="pFh-NS-kg6" appends="YES" id="3uJ-mo-wyP"/>
                                                         </connections>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLE-du-fUz">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLE-du-fUz">
                                                         <rect key="frame" x="0.0" y="189" width="60" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -579,10 +579,10 @@ you should consume per day...</string>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gQi-ga-UA1">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gQi-ga-UA1">
                                                 <rect key="frame" x="279" y="0.0" width="63" height="210"/>
                                                 <subviews>
-                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="womenBodyShape5" translatesAutoresizingMaskIntoConstraints="NO" id="3uY-oi-iGd">
+                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenBodyShape5" translatesAutoresizingMaskIntoConstraints="NO" id="3uY-oi-iGd">
                                                         <rect key="frame" x="0.0" y="0.0" width="63" height="189"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -592,7 +592,7 @@ you should consume per day...</string>
                                                             <outletCollection property="gestureRecognizers" destination="gbl-Fc-jx6" appends="YES" id="ma1-MI-6E7"/>
                                                         </connections>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60r-x1-ofB">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60r-x1-ofB">
                                                         <rect key="frame" x="0.0" y="189" width="63" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1806,7 +1806,7 @@ Calories</string>
                                             <constraint firstAttribute="width" secondItem="o3K-wf-CC8" secondAttribute="height" multiplier="13:16" id="yTb-he-6cn"/>
                                         </constraints>
                                     </imageView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wtM-Jx-mGX">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.25" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wtM-Jx-mGX">
                                         <rect key="frame" x="69" y="0.0" width="422" height="81"/>
                                     </slider>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="65" placeholderIntrinsicHeight="80" image="fullStomach" translatesAutoresizingMaskIntoConstraints="NO" id="Hl4-7y-6Yz">
@@ -1869,7 +1869,7 @@ Calories</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6k-cZ-CyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="2605"/>
+            <point key="canvasLocation" x="141" y="2589"/>
         </scene>
         <!--History -->
         <scene sceneID="lba-cS-1PK">

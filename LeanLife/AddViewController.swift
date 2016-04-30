@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import RealmSwift
 
-class AddViewController: UIViewController, UITextFieldDelegate {
+class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //MARK: Properties 
     
@@ -16,25 +17,38 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var quantityTextField: UITextField!
     @IBOutlet weak var quantitySegmentedControl: UISegmentedControl!
-    @IBOutlet weak var carbsTextField: UITextField!
+    @IBOutlet weak var carbohydratesTextField: UITextField!
     @IBOutlet weak var proteinsTextField: UITextField!
     @IBOutlet weak var fatTextField: UITextField!
     @IBOutlet weak var caloriesTextField: UITextField!
     @IBOutlet weak var imageImageView: UIImageView!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
-    let myMeal = Meal()
     
-
-    override func viewDidLoad() {
+    //MARK: Realm
+    
+    //MARK: TextField
+    
+    var myMeal = Meal()
+    
+    let realm = try! Realm()
+    
+    
+  override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         mealNameTextField.delegate = self
         quantityTextField.delegate = self
-        carbsTextField.delegate = self
+        carbohydratesTextField.delegate = self
         proteinsTextField.delegate = self
         fatTextField.delegate = self
         caloriesTextField.delegate = self
+        mealNameTextField.tag = 0
+        quantityTextField.tag = 1
+        carbohydratesTextField.tag = 2
+        proteinsTextField.tag = 3
+        fatTextField.tag = 4
+        caloriesTextField.tag = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,15 +75,10 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if saveButton === sender {
-            let mealName = mealNameTextField.text
-            let saveTabButton = saveButton.action
-            let quantity = quantityTextField.text
-            let quantitySegmentSelection = quantitySegmentedControl.selectedSegmentIndex
-            let carbohydrates = carbsTextField.text
-            let proteins = proteinsTextField.text
-            let fats = fatTextField.text
-            let calories = caloriesTextField.text
-            let photo = imageImageView.image
+            myMeal.mealName = mealNameTextField.text!
+            try! realm.write {
+                realm.add(myMeal)
+            }
         
             
         }
@@ -95,6 +104,85 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         }
         return false // We do not want UITextField to insert line-breaks.
     }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        if textField.tag == 0 {
+            if let text = textField.text {
+                try! realm.write {
+                    self.myMeal.mealName = text
+                }
+            }
+            
+        }
+        if textField.tag == 1 {
+            if let text = Double(textField.text!){
+                if text >= 0 {
+                    try! realm.write {
+                        self.myMeal.quantity = text
+                    }
+
+                }
+                
+            }
+        }
+        if textField.tag == 2 {
+            if let text = Double(textField.text!){
+                if text >= 0 {
+                    try! realm.write {
+                        self.myMeal.carbohydrates = text
+                    }
+                    
+                }
+                
+            }
+        }
+        
+        if textField.tag == 3 {
+            if let text = Double(textField.text!){
+                if text >= 0 {
+                    try! realm.write {
+                        self.myMeal.proteins = text
+                    }
+                    
+                }
+                
+            }
+        }
+        if textField.tag == 4 {
+            if let text = Double(textField.text!){
+                if text >= 0 {
+                    try! realm.write {
+                        self.myMeal.fat = text
+                    }
+                    
+                }
+                
+            }
+        }
+        if textField.tag == 5 {
+            if let text = Double(textField.text!){
+                if text >= 0 {
+                    try! realm.write {
+                        self.myMeal.calories = text
+                    }
+                    
+                }
+                
+            }
+        }
+    }
   
 
 }
+
+
+/*
+ self.myMeal.quantity = Double(quantityTextField.text!)!
+ self.myMeal.quantitySegementedControl = quantitySegmentedControl.selectedSegmentIndex
+ self.myMeal.carbohydrates = Double(carbohydratesTextField.text!)!
+ self.myMeal.proteins = Double(proteinsTextField.text!)!
+ self.myMeal.fat = Double(fatTextField.text!)!
+ self.myMeal.calories = Double(caloriesTextField.text!)!
+ self.myMeal.image = UIImage(contentsOfFile: imageImageView.image)
+ */
+
