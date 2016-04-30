@@ -203,10 +203,13 @@
                                         <rect key="frame" x="0.0" y="51" width="520" height="45"/>
                                         <segments>
                                             <segment title="Lose "/>
-                                            <segment title="Mantain"/>
+                                            <segment title="Maintain"/>
                                             <segment title="Gain"/>
                                         </segments>
                                         <color key="tintColor" red="0.29019607843137252" green="0.75294117647058822" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="indexChanged:" destination="M9t-Zg-8bE" eventType="valueChanged" id="0bH-Jm-O9l"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
@@ -318,6 +321,14 @@ you should consume per day...</string>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Goal" image="goalStablishmentTabIcon" id="7Km-Wa-Z74"/>
+                    <connections>
+                        <outlet property="WeightGoal" destination="Qyf-wz-kjP" id="QnU-og-MFp"/>
+                        <outlet property="caloriesLabel" destination="V1a-y7-gon" id="CD2-WT-o8O"/>
+                        <outlet property="carbohydratesLabel" destination="lOd-hp-jn5" id="BEK-qH-xSY"/>
+                        <outlet property="fatsLabel" destination="snd-st-abj" id="107-lI-4I1"/>
+                        <outlet property="proteinLabel" destination="Hmn-fZ-4df" id="6Ae-ej-xp5"/>
+                        <outlet property="segmentesControl" destination="w1X-ap-I2z" id="B0Y-Vv-Ncb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldO-Hs-boy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
