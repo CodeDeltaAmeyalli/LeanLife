@@ -34,14 +34,16 @@ class GoalViewController: UIViewController {
         {
         
             case 0:
+                let lose = calorieIntake(measurements.weight, height: measurements.height, age: profile.age, gender: profile.gender)-500
     
                 try! realm.write {
                     meta.goal = "Lose"
-                }
+                } 
                 WeightGoal.text = meta.goal
 
     
             case 1:
+                let mantain = calorieIntake(measurements.weight, height: measurements.height, age: profile.age, gender: profile.gender)
                 
                 try! realm.write {
                     meta.goal = "Maintain"
@@ -49,6 +51,7 @@ class GoalViewController: UIViewController {
                 WeightGoal.text = meta.goal
      
             case 2:
+                let gain = calorieIntake(measurements.weight, height: measurements.height, age: profile.age, gender: profile.gender)+500
                 
                 try! realm.write {
                     meta.goal = "Gain"
@@ -65,11 +68,11 @@ class GoalViewController: UIViewController {
     
     //MARK: Actions 
     
-    func calorieIntake(weight: Double, height: Double, age: Double, gender: String)-> Int {
+    func calorieIntake(weight: Double, height: Double, age: Int, gender: String)-> Int {
         let weigthAdjusted = (10*weight)
         let heightInCentimeters = (height*100)
         let heightAdjusted = (6.25*heightInCentimeters)
-        let ageAdjusted = (5*age)
+        let ageAdjusted = Double(5*age)
         var calories = 0
         switch measurements.physicalActivity {
         case 0:
@@ -125,12 +128,9 @@ class GoalViewController: UIViewController {
             meta.dailyCalories = calories
         }
         return calories
-
-
-        
       
-        
     }
+    
     func proteinIntake(calorieIntake: Int) {
          var proteinIntake = (0.20*Double(calorieIntake))
         
@@ -195,7 +195,10 @@ class GoalViewController: UIViewController {
             
         }
         
-        proteinLabel.text = "\(proteinIntake)"
+        proteinLabel.text = String(proteinIntake)
+        carbohydratesLabel.text = "\(carbohydratesIntake)"
+        fatsLabel.text = "\(fatIntake)"
+        caloriesLabel.text = "\(calorieIntake)"
         
 /*self.profile = profile
  nameTextField.text = self.profile.name
