@@ -23,10 +23,11 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     @IBOutlet weak var caloriesTextField: UITextField!
     @IBOutlet weak var imageImageView: UIImageView!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var satietySlider: UISlider!
     
     //MARK: Realm
     
-    //MARK: TextField
+    //MARK: TextField and Slider
     
     var myMeal = Meal()
     
@@ -43,13 +44,14 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         proteinsTextField.delegate = self
         fatTextField.delegate = self
         caloriesTextField.delegate = self
-        mealNameTextField.tag = 0
+    mealNameTextField.tag = 0
         quantityTextField.tag = 1
         carbohydratesTextField.tag = 2
         proteinsTextField.tag = 3
         fatTextField.tag = 4
         caloriesTextField.tag = 5
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,14 +59,13 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     }
     
     //MARK: Actions 
-  
-        /* @IBAction func sliderValueChanged(sender: UISlider) {
-        let currentValue = Int(sender.value)
-        myMeal.satiety = currentValue
- 
-       
-    } */ 
     
+    @IBAction func satietySliderValuChanged(sender: UISlider) {
+        let currentValue = Double(sender.value)
+        myMeal.satiety = currentValue
+        
+    }
+  
     // MARK:  Navigation
     @IBAction func cancelButton(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -170,19 +171,9 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
                 
             }
         }
+
     }
   
 
 }
-
-
-/*
- self.myMeal.quantity = Double(quantityTextField.text!)!
- self.myMeal.quantitySegementedControl = quantitySegmentedControl.selectedSegmentIndex
- self.myMeal.carbohydrates = Double(carbohydratesTextField.text!)!
- self.myMeal.proteins = Double(proteinsTextField.text!)!
- self.myMeal.fat = Double(fatTextField.text!)!
- self.myMeal.calories = Double(caloriesTextField.text!)!
- self.myMeal.image = UIImage(contentsOfFile: imageImageView.image)
- */
 
