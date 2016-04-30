@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DailyProgressViewController: UIViewController {
     
+    //MARK: Realm
+    
+    var daylyProgress = Day()
+    let realm = try! Realm ()
+    
     
     //MARK: Actions 
-    
-    
    
+    @IBOutlet weak var energyProgressBar: UIProgressView!
+    @IBOutlet weak var carbohydratesProgressBar: UIProgressView!
+    @IBOutlet weak var fatProgressBar: UIProgressView!
+    @IBOutlet weak var proteinsProgressBar: UIProgressView!
     @IBOutlet weak var waterProgressBar: UIProgressView!
 
     override func viewDidLoad() {
@@ -22,7 +30,7 @@ class DailyProgressViewController: UIViewController {
     
         stepper.wraps = true
         stepper.autorepeat = true
-        stepper.maximumValue = 8
+        stepper.maximumValue = 30
 
         // Do any additional setup after loading the view.
     }
