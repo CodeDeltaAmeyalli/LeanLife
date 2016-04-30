@@ -66,16 +66,19 @@ class GoalViewController: UIViewController {
          default:
          break;
         }
-        proteinIntake(dailyCalories)
-        carbohydratesIntake(dailyCalories)
-        fatIntake(dailyCalories)
+        dailyProteins = proteinIntake(dailyCalories)
+        dailyCarbohydrates = carbohydratesIntake(dailyCalories)
+        dailyFats = fatIntake(dailyCalories)
         try! realm.write {
             meta.dailyCalories = dailyCalories
+            meta.dailyCarbohydrates = dailyCarbohydrates
+            meta.dailyFats = dailyFats
+            meta.dailyProteins = dailyProteins
         }
         caloriesLabel.text = String(dailyCalories)
-        proteinLabel.text = String(dailyProteins)
-        caloriesLabel.text = String(dailyCarbohydrates)
-        fatsLabel.text = String(dailyFats)
+        proteinLabel.text = String(dailyProteins) +  " g"
+        carbohydratesLabel.text = String(dailyCarbohydrates) +  " g"
+        fatsLabel.text = String(dailyFats) +  " g"
         
     }
     
@@ -147,23 +150,23 @@ class GoalViewController: UIViewController {
       
     }
     
-    func proteinIntake(calorieIntake: Int) {
-         var proteinIntake = (0.20*Double(calorieIntake))
+    func proteinIntake(calorieIntake: Int)-> Int {
+         let proteinIntake = (0.20*Double(calorieIntake))
         
-        return proteinIntake = (proteinIntake*1/(4))
+        return Int(round((proteinIntake*1/(4))))
     }
     
-    func carbohydratesIntake(calorieIntake: Int) {
+    func carbohydratesIntake(calorieIntake: Int)-> Int {
         
-        var carbohydratesIntake = (0.60*Double(calorieIntake))
+        let carbohydratesIntake = (0.60*Double(calorieIntake))
         
-        return carbohydratesIntake = (carbohydratesIntake*1/(4))
+        return  Int(round((carbohydratesIntake*1/(4))))
         
     }
     
-    func fatIntake(calorieIntake: Int) {
-        var fatIntake = (0.20*Double(calorieIntake))
-        return fatIntake = (fatIntake*1/(9))
+    func fatIntake(calorieIntake: Int)-> Int {
+        let fatIntake = (0.20*Double(calorieIntake))
+        return Int(round((fatIntake*1/(9))))
         
     }
     
