@@ -14,12 +14,14 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     //MARK: Properties 
     
     @IBOutlet weak var weightTextField: UITextField!
-
+    @IBOutlet weak var massLabel: UILabel!
+    @IBOutlet weak var bodyFrameLabel: UILabel!
     @IBOutlet weak var physicalActivityPicker: UILabel!
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var pickerActivity: UIPickerView!
     @IBOutlet weak var diameterTextField: UITextField!
-    
+
+   
     @IBOutlet weak var activityPickerView: UIPickerView!
     var pickerActivityData: [String] = [String]()
     
@@ -158,6 +160,8 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
 // Save user's info
     func textFieldDidEndEditing(textField: UITextField) {
+        var mass = 0
+        var bodyFraming = ""
          if textField.tag == 0 {
             if let text = Double(textField.text!) {
                 try! realm.write {
@@ -178,13 +182,41 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             if let text = Double(textField.text!) {
                 try! realm.write {
                     measurements.wristMeasure = text
+                    
                 }
+                mass = Int(round(IMC(measurements.weight, height: measurements.height)))
+                bodyFraming = BodyFrame(measurements.height, wristMeasure: measurements.wristMeasure)
+                massLabel.text = "\(mass)"
+                bodyFrameLabel.text = bodyFraming
+
             }
         }
     }
     
 
-
+    // MARK: Methods 
+    
+    func IMC(weight: Double, height: Double)-> Double {
+        var imc = 0.0
+        imc = weight/(height*height)
+        return imc
+    }
+    
+    func BodyFrame(height: Double, wristMeasure: Double)-> String {
+        var bodyFrame = 0.0
+        bodyFrame = (height*100)/wristMeasure
+        
+            if bodyFrame > 10.9 {
+            return "Small"
+            }
+            else if bodyFrame >= 9.9 {
+                return "Medium"
+            }
+            else  {
+                return "Large"
+            }
+        
+    }
  
  
  
