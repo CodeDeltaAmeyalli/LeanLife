@@ -14,6 +14,9 @@ class Goal: Object {
     dynamic var goal = ""
     dynamic var id = 0
     dynamic var dailyCalories = 0
+    dynamic var dailyProteins = 0
+    dynamic var dailyCarbohydrates = 0
+    dynamic var dailyFats = 0 
     
     /* //MARK: Initialization
      init?(photo: UIImage, name: String, age: Int, allergies: String, gender:UISegmentedControlSegment){

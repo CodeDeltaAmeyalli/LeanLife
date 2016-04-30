@@ -30,20 +30,25 @@ class GoalViewController: UIViewController {
    
     @IBOutlet weak var fatsLabel: UILabel!
     @IBAction func indexChanged(sender: UISegmentedControl){
+        var dailyCalories = 0
+        var dailyProteins = 0
+        var dailyCarbohydrates = 0
+        var dailyFats = 0
         switch segmentesControl.selectedSegmentIndex
         {
         
             case 0:
-                let lose = calorieIntake(measurements.weight, height: measurements.height, age: profile.age, gender: profile.gender)-500
+                dailyCalories = calorieIntake(measurements.weight, height: measurements.height, age: profile.age, gender: profile.gender)-500
+                
     
                 try! realm.write {
                     meta.goal = "Lose"
-                } 
+                }
                 WeightGoal.text = meta.goal
 
     
             case 1:
-                let mantain = calorieIntake(measurements.weight, height: measurements.height, age: profile.age, gender: profile.gender)
+                dailyCalories = calorieIntake(measurements.weight, height: measurements.height, age: profile.age, gender: profile.gender)
                 
                 try! realm.write {
                     meta.goal = "Maintain"
@@ -51,7 +56,7 @@ class GoalViewController: UIViewController {
                 WeightGoal.text = meta.goal
      
             case 2:
-                let gain = calorieIntake(measurements.weight, height: measurements.height, age: profile.age, gender: profile.gender)+500
+                dailyCalories = calorieIntake(measurements.weight, height: measurements.height, age: profile.age, gender: profile.gender)+500
                 
                 try! realm.write {
                     meta.goal = "Gain"
@@ -61,6 +66,17 @@ class GoalViewController: UIViewController {
          default:
          break;
         }
+        proteinIntake(dailyCalories)
+        carbohydratesIntake(dailyCalories)
+        fatIntake(dailyCalories)
+        try! realm.write {
+            meta.dailyCalories = dailyCalories
+        }
+        caloriesLabel.text = String(dailyCalories)
+        proteinLabel.text = String(dailyProteins)
+        caloriesLabel.text = String(dailyCarbohydrates)
+        fatsLabel.text = String(dailyFats)
+        
     }
     
     
@@ -195,10 +211,10 @@ class GoalViewController: UIViewController {
             
         }
         
-        proteinLabel.text = String(proteinIntake)
+        /*proteinLabel.text = String(proteinIntake)
         carbohydratesLabel.text = "\(carbohydratesIntake)"
         fatsLabel.text = "\(fatIntake)"
-        caloriesLabel.text = "\(calorieIntake)"
+        caloriesLabel.text = "\(calorieIntake)" */
         
 /*self.profile = profile
  nameTextField.text = self.profile.name
